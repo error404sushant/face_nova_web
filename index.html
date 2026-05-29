@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -26,7 +26,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="style.css" />
 
@@ -57,97 +57,148 @@
         <li><a href="#how-it-works">How it works</a></li>
         <li><a href="#integration">Integration</a></li>
         <li><a href="#pricing">Pricing</a></li>
-        <li><button class="btn btn-sm" onclick="openModal('trial')">Try Free 10 Days</button></li>
       </ul>
-      <button class="hamburger" id="hamburger" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="nav-right">
+        <!-- Theme toggle -->
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <!-- Sun (shown in light mode) -->
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+          <!-- Moon (shown in dark mode) -->
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+        <button class="btn btn-sm btn-primary nav-cta" onclick="openModal('trial')">Try Free 10 Days</button>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
     <div class="mobile-menu" id="mobile-menu">
-      <a href="#features">Features</a>
-      <a href="#how-it-works">How it works</a>
-      <a href="#integration">Integration</a>
-      <a href="#pricing">Pricing</a>
-      <button class="btn btn-sm" onclick="openModal('trial');document.getElementById('mobile-menu').classList.remove('open')">Try Free 10 Days</button>
+      <a href="#features" onclick="document.getElementById('mobile-menu').classList.remove('open')">Features</a>
+      <a href="#how-it-works" onclick="document.getElementById('mobile-menu').classList.remove('open')">How it works</a>
+      <a href="#integration" onclick="document.getElementById('mobile-menu').classList.remove('open')">Integration</a>
+      <a href="#pricing" onclick="document.getElementById('mobile-menu').classList.remove('open')">Pricing</a>
+      <button class="btn btn-sm btn-primary" onclick="openModal('trial');document.getElementById('mobile-menu').classList.remove('open')">Try Free 10 Days</button>
     </div>
   </nav>
 
   <!-- ──────────────── HERO ──────────────── -->
   <section class="hero">
     <div class="hero-bg">
-      <div class="hero-grid"></div>
       <div class="blob blob-1"></div>
       <div class="blob blob-2"></div>
-      <div class="blob blob-3"></div>
     </div>
-    <div class="container hero-content">
-      <div class="badge">
-        <span class="badge-dot"></span>
-        Flutter • Android • iOS
-      </div>
-      <h1>
-        Real Faces.<br />
-        <span class="gradient-text">Zero Spoofing.</span>
-      </h1>
-      <p class="hero-sub">
-        FaceNova is a passive liveness detection &amp; face recognition SDK for Flutter, Android and iOS.
-        Integrate in minutes. Block photo attacks, video replays, and 3D masks instantly.
-      </p>
-      <div class="hero-actions">
-        <button class="btn btn-primary btn-lg" onclick="openModal('trial')">
-          Try Free for 10 Days
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
-        <a href="#pricing" class="btn btn-ghost btn-lg">See Pricing</a>
-      </div>
-      <div class="hero-stats">
-        <div class="stat">
-          <span class="stat-num">99.7<span class="stat-unit">%</span></span>
-          <span class="stat-label">Liveness Accuracy</span>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat">
-          <span class="stat-num">&lt;300<span class="stat-unit">ms</span></span>
-          <span class="stat-label">Detection Speed</span>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat">
-          <span class="stat-num">3</span>
-          <span class="stat-label">Lines to Integrate</span>
-        </div>
-      </div>
-    </div>
-    <!-- Face scan animation -->
-    <div class="hero-visual">
-      <div class="scan-container">
-        <div class="face-frame">
-          <div class="corner tl"></div>
-          <div class="corner tr"></div>
-          <div class="corner bl"></div>
-          <div class="corner br"></div>
-          <div class="scan-line"></div>
-          <div class="face-icon">
-            <svg viewBox="0 0 120 140" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <ellipse cx="60" cy="65" rx="38" ry="48" stroke="rgba(99,179,237,0.6)" stroke-width="2"/>
-              <circle cx="45" cy="58" r="5" fill="rgba(99,179,237,0.8)"/>
-              <circle cx="75" cy="58" r="5" fill="rgba(99,179,237,0.8)"/>
-              <path d="M45 82 Q60 94 75 82" stroke="rgba(99,179,237,0.8)" stroke-width="2.5" stroke-linecap="round" fill="none"/>
-              <ellipse cx="60" cy="30" rx="20" ry="18" stroke="rgba(99,179,237,0.3)" stroke-width="1.5"/>
-            </svg>
+    <div class="container">
+      <div class="hero-inner">
+
+        <!-- Left: content -->
+        <div class="hero-content">
+          <div class="badge">
+            <span class="badge-dot"></span>
+            Flutter • Android • iOS
           </div>
-          <div class="check-badge">
-            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#22d37a"/><path d="M7 12l3.5 3.5L17 8.5" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            LIVE
+          <h1>
+            Real Faces.<br />
+            <span class="gradient-text">Zero Spoofing.</span>
+          </h1>
+          <p class="hero-sub">
+            FaceNova is a passive liveness detection &amp; face recognition SDK for Flutter, Android and iOS.
+            Integrate in minutes. Block photo attacks, video replays, and 3D masks instantly.
+          </p>
+          <div class="hero-actions">
+            <button class="btn btn-primary btn-lg" onclick="openModal('trial')">
+              Try Free for 10 Days
+              <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <a href="#pricing" class="btn btn-ghost btn-lg">See Pricing</a>
           </div>
-          <div class="data-points">
-            <div class="dp dp-1">● Face detected</div>
-            <div class="dp dp-2">● Liveness: 98.4%</div>
-            <div class="dp dp-3">● Anti-spoof: PASS</div>
+          <div class="hero-stats">
+            <div class="stat">
+              <span class="stat-num" id="stat-accuracy">99.7<span class="stat-unit">%</span></span>
+              <span class="stat-label">liveness accuracy</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat">
+              <span class="stat-num">&lt;300<span class="stat-unit">ms</span></span>
+              <span class="stat-label">detection speed</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat">
+              <span class="stat-num">3</span>
+              <span class="stat-label">lines to integrate</span>
+            </div>
           </div>
         </div>
-        <div class="pulse-ring r1"></div>
-        <div class="pulse-ring r2"></div>
-      </div>
+
+        <!-- Right: scanner window -->
+        <div class="hero-scanner">
+          <div class="scanner-window" id="scanner-window">
+            <div class="scanner-titlebar">
+              <div class="titlebar-dots">
+                <span></span><span></span><span></span>
+              </div>
+              <div class="titlebar-label">FaceNova SDK — Live Demo</div>
+              <div class="titlebar-badge">● LIVE</div>
+            </div>
+            <div class="scanner-viewport">
+              <!-- Camera view -->
+              <div class="face-detection-area">
+                <div class="corner tl"></div>
+                <div class="corner tr"></div>
+                <div class="corner bl"></div>
+                <div class="corner br"></div>
+                <div class="face-oval"></div>
+                <div class="scan-line"></div>
+                <div class="face-icon">
+                  <svg viewBox="0 0 120 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="60" cy="68" rx="36" ry="46" stroke="rgba(99,102,241,0.5)" stroke-width="1.5"/>
+                    <circle cx="46" cy="60" r="4.5" fill="rgba(99,102,241,0.7)"/>
+                    <circle cx="74" cy="60" r="4.5" fill="rgba(99,102,241,0.7)"/>
+                    <path d="M46 84 Q60 96 74 84" stroke="rgba(99,102,241,0.7)" stroke-width="2" stroke-linecap="round" fill="none"/>
+                    <ellipse cx="60" cy="32" rx="18" ry="16" stroke="rgba(99,102,241,0.25)" stroke-width="1.2"/>
+                  </svg>
+                </div>
+              </div>
+
+              <!-- Detection results -->
+              <div class="detection-results">
+                <div class="result-row">
+                  <span class="result-label">Liveness</span>
+                  <div class="result-bar-wrap">
+                    <div class="result-bar"><div class="result-fill" id="fill-liveness"></div></div>
+                  </div>
+                  <span class="result-value">98.4%</span>
+                </div>
+                <div class="result-row">
+                  <span class="result-label">Anti-spoof</span>
+                  <div class="result-spacer"></div>
+                  <span class="result-badge pass">PASS</span>
+                </div>
+                <div class="result-row">
+                  <span class="result-label">Confidence</span>
+                  <div class="result-bar-wrap">
+                    <div class="result-bar"><div class="result-fill conf-fill" id="fill-conf"></div></div>
+                  </div>
+                  <span class="result-value">0.87</span>
+                </div>
+              </div>
+
+              <!-- Footer status -->
+              <div class="scanner-footer">
+                <div class="sf-status">
+                  <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="currentColor" opacity=".15"/><path d="M7 12l3.5 3.5L17 8.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  Identity Verified
+                </div>
+                <div class="sf-time">187ms</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /hero-inner -->
     </div>
   </section>
 
@@ -156,27 +207,91 @@
     <div class="container">
       <p class="trust-label">Works seamlessly with</p>
       <div class="trust-logos">
+
+        <!-- Flutter — correct F-kite mark (3-path, simpleicons) -->
         <div class="trust-logo">
-          <svg height="28" viewBox="0 0 66 75" fill="none"><path d="M33 0L66 18.75V56.25L33 75L0 56.25V18.75L33 0Z" fill="#54C5F8" opacity=".9"/><path d="M33 12L54 24V48L33 60L12 48V24L33 12Z" fill="#01579B"/></svg>
+          <svg height="22" viewBox="0 0 24 24" fill="none">
+            <path d="M14.314 0L2.3 12 6 15.7 21.684.013z" fill="#54C5F8"/>
+            <path d="M14.314 11.07L7.857 17.53l6.47 6.47H21.7l-6.46-6.468 6.46-6.46h-7.386z" fill="#01579B"/>
+            <path d="M7.857 17.53l3.745 3.744 3.957-3.744z" fill="#29B6F6"/>
+          </svg>
           Flutter
         </div>
+
+        <!-- Android — official Bugdroid -->
         <div class="trust-logo">
-          <svg height="28" viewBox="0 0 24 24" fill="none"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2z" fill="#3DDC84"/><path d="M7 14l2.5-4.5 2 3 2.5-5L17 14H7z" fill="white"/></svg>
+          <svg height="22" viewBox="0 0 24 24" fill="#3DDC84">
+            <path d="M6 18c0 .55.45 1 1 1h1v3.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5V19h2v3.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5V19h1c.55 0 1-.45 1-1V8H6v10zm-2.5-2C2.67 16 2 15.33 2 14.5v-5C2 8.67 2.67 8 3.5 8S5 8.67 5 9.5v5c0 .83-.67 1.5-1.5 1.5zm17 0c-.83 0-1.5-.67-1.5-1.5v-5c0-.83.67-1.5 1.5-1.5S23 8.67 23 9.5v5c0 .83-.67 1.5-1.5 1.5zM15.53 2.16l1.3-1.3c.2-.2.2-.51 0-.71-.2-.2-.51-.2-.71 0l-1.48 1.48A5.84 5.84 0 0 0 12 1c-.57 0-1.11.08-1.63.23L8.88.15c-.2-.2-.51-.2-.71 0-.2.2-.2.51 0 .71l1.31 1.31A5.847 5.847 0 0 0 6 7h12a5.85 5.85 0 0 0-2.47-4.84zM10 5H9V4h1v1zm5 0h-1V4h1v1z"/>
+          </svg>
           Android
         </div>
+
+        <!-- iOS — Apple logo -->
         <div class="trust-logo">
-          <svg height="28" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="5" fill="#555"/><path d="M12 4.5c-4.142 0-7.5 3.358-7.5 7.5s3.358 7.5 7.5 7.5 7.5-3.358 7.5-7.5S16.142 4.5 12 4.5zm0 13.5c-3.314 0-6-2.686-6-6s2.686-6 6-6 6 2.686 6 6-2.686 6-6 6z" fill="white"/></svg>
+          <svg height="22" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83zM13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" opacity=".75"/>
+          </svg>
           iOS
         </div>
-        <div class="trust-logo">
-          <svg height="28" viewBox="0 0 24 24" fill="none"><path d="M3 3h7v7H3zm11 0h7v7h-7zM3 14h7v7H3zm11 7l-2.5-4.33L14 12l2.5 4.33L19 12l2.5 4.33L19 21H14z" fill="#FF6B35" opacity=".9"/></svg>
-          Firebase
-        </div>
-        <div class="trust-logo">
-          <svg height="28" viewBox="0 0 24 24" fill="none"><path d="M4 5a1 1 0 000 2h16a1 1 0 000-2H4zm0 6a1 1 0 000 2h16a1 1 0 000-2H4zm0 6a1 1 0 000 2h16a1 1 0 000-2H4z" fill="#5568FE"/></svg>
-          pub.dev
-        </div>
+
+        <!-- pub.dev removed from here, see pubdev-section below -->
+
       </div>
+    </div>
+  </section>
+
+  <!-- ──────────────── PUB.DEV PACKAGE CARD ──────────────── -->
+  <section class="pubdev-section">
+    <div class="container">
+      <a class="pubdev-card"
+         href="https://pub.dev/packages/flutter_biometric_liveness"
+         target="_blank" rel="noopener">
+
+        <!-- Left: identity -->
+        <div class="pubdev-identity">
+          <div class="pubdev-dart-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+              <path d="M14.314 0L2.3 12 6 15.7 21.684.013z" fill="#54C5F8"/>
+              <path d="M14.314 11.07L7.857 17.53l6.47 6.47H21.7l-6.46-6.468 6.46-6.46h-7.386z" fill="#01579B"/>
+              <path d="M7.857 17.53l3.745 3.744 3.957-3.744z" fill="#29B6F6"/>
+            </svg>
+          </div>
+          <div>
+            <div class="pubdev-pkg-name">flutter_biometric_liveness</div>
+            <div class="pubdev-pkg-sub">pub.dev · Dart &amp; Flutter package</div>
+          </div>
+        </div>
+
+        <!-- Center: live stats -->
+        <div class="pubdev-stats">
+          <div class="pubdev-stat">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="currentColor"/></svg>
+            <span class="pubdev-stat-val" id="pd-likes">—</span>
+            <span class="pubdev-stat-lbl">likes</span>
+          </div>
+          <div class="pubdev-stat-divider"></div>
+          <div class="pubdev-stat">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            <span class="pubdev-stat-val" id="pd-points">—</span>
+            <span class="pubdev-stat-lbl">pub points</span>
+          </div>
+          <div class="pubdev-stat-divider"></div>
+          <div class="pubdev-stat">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="pubdev-stat-val" id="pd-pop">—</span>
+            <span class="pubdev-stat-lbl">popularity</span>
+          </div>
+        </div>
+
+        <!-- Right: CTA -->
+        <div class="pubdev-cta">
+          <span class="pubdev-btn">
+            View on pub.dev
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 2h8v8M10 2 2 10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </span>
+        </div>
+
+      </a>
     </div>
   </section>
 
@@ -185,13 +300,13 @@
     <div class="container">
       <div class="section-header">
         <span class="section-tag">Features</span>
-        <h2>Everything you need to<br /><span class="gradient-text">verify real users</span></h2>
+        <h2>Everything you need to verify real users</h2>
         <p>Built for developers. Trusted by enterprises. Works offline.</p>
       </div>
 
       <div class="features-grid">
         <div class="feature-card feature-card-large">
-          <div class="feature-icon" style="--c:#6366f1">
+          <div class="feature-icon">
             <svg viewBox="0 0 24 24" fill="none"><path d="M12 2C8 2 4 5 4 9c0 5.25 8 13 8 13s8-7.75 8-13c0-4-4-7-8-7z" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.8"/></svg>
           </div>
           <h3>Passive Liveness Detection</h3>
@@ -202,7 +317,7 @@
         </div>
 
         <div class="feature-card">
-          <div class="feature-icon" style="--c:#22d37a">
+          <div class="feature-icon">
             <svg viewBox="0 0 24 24" fill="none"><circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="1.8"/><path d="M3 21v-2a4 4 0 014-4h4a4 4 0 014 4v2" stroke="currentColor" stroke-width="1.8"/><path d="M16 3.13a4 4 0 010 7.75M21 21v-2a4 4 0 00-3-3.87" stroke="currentColor" stroke-width="1.8"/></svg>
           </div>
           <h3>Face Recognition</h3>
@@ -210,7 +325,7 @@
         </div>
 
         <div class="feature-card">
-          <div class="feature-icon" style="--c:#f59e0b">
+          <div class="feature-icon">
             <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="3" width="20" height="14" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M8 21h8M12 17v4" stroke="currentColor" stroke-width="1.8"/></svg>
           </div>
           <h3>On-Device Processing</h3>
@@ -218,7 +333,7 @@
         </div>
 
         <div class="feature-card">
-          <div class="feature-icon" style="--c:#ec4899">
+          <div class="feature-icon">
             <svg viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="1.8"/></svg>
           </div>
           <h3>License-Gated Security</h3>
@@ -226,7 +341,7 @@
         </div>
 
         <div class="feature-card">
-          <div class="feature-icon" style="--c:#06b6d4">
+          <div class="feature-icon">
             <svg viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
           </div>
           <h3>Fast &amp; Lightweight</h3>
@@ -234,7 +349,7 @@
         </div>
 
         <div class="feature-card feature-card-code">
-          <div class="feature-icon" style="--c:#8b5cf6">
+          <div class="feature-icon">
             <svg viewBox="0 0 24 24" fill="none"><polyline points="16 18 22 12 16 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><polyline points="8 6 2 12 8 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
           </div>
           <h3>3-Line Integration</h3>
@@ -254,7 +369,7 @@
     <div class="container">
       <div class="section-header">
         <span class="section-tag">How It Works</span>
-        <h2>From camera to<br /><span class="gradient-text">verified identity</span></h2>
+        <h2>From camera to verified identity</h2>
         <p>A seamless 4-step pipeline that takes milliseconds.</p>
       </div>
 
@@ -270,7 +385,7 @@
         <div class="step">
           <div class="step-num">02</div>
           <div class="step-content">
-            <h3>Passive Liveness Check</h3>
+            <h3>Passive Check</h3>
             <p>Our TFLite model analyzes the face in real-time. The user just looks at the camera — no actions needed.</p>
           </div>
         </div>
@@ -279,7 +394,7 @@
           <div class="step-num">03</div>
           <div class="step-content">
             <h3>Face Embedding</h3>
-            <p>A 512-byte FaceNet embedding is extracted from the captured frame — a unique mathematical fingerprint of the face.</p>
+            <p>A 512-byte FaceNet embedding is extracted — a unique mathematical fingerprint of the face.</p>
           </div>
         </div>
         <div class="step-arrow">→</div>
@@ -287,7 +402,7 @@
           <div class="step-num">04</div>
           <div class="step-content">
             <h3>Match &amp; Decide</h3>
-            <p>Compare against enrolled templates using cosine similarity. Get a score in [0,1] — ≥0.65 is a strong match.</p>
+            <p>Compare against enrolled templates using cosine similarity. Score ≥ 0.65 is a strong match.</p>
           </div>
         </div>
       </div>
@@ -326,7 +441,7 @@
     <div class="container">
       <div class="section-header">
         <span class="section-tag">Integration</span>
-        <h2>Up and running<br /><span class="gradient-text">in under 5 minutes</span></h2>
+        <h2>Up and running in under 5 minutes</h2>
       </div>
 
       <div class="code-tabs">
@@ -407,22 +522,10 @@ dependencies:
       </div>
 
       <div class="integration-features">
-        <div class="int-feat">
-          <span class="int-icon">⚡</span>
-          <span>No backend required</span>
-        </div>
-        <div class="int-feat">
-          <span class="int-icon">🔒</span>
-          <span>Encrypted models</span>
-        </div>
-        <div class="int-feat">
-          <span class="int-icon">📦</span>
-          <span>Available on pub.dev</span>
-        </div>
-        <div class="int-feat">
-          <span class="int-icon">🌐</span>
-          <span>Android + iOS support</span>
-        </div>
+        <div class="int-feat"><span class="int-icon">⚡</span><span>No backend required</span></div>
+        <div class="int-feat"><span class="int-icon">🔒</span><span>Encrypted models</span></div>
+        <div class="int-feat"><span class="int-icon">📦</span><span>Available on pub.dev</span></div>
+        <div class="int-feat"><span class="int-icon">🌐</span><span>Android + iOS support</span></div>
       </div>
     </div>
   </section>
@@ -432,7 +535,7 @@ dependencies:
     <div class="container">
       <div class="section-header">
         <span class="section-tag">Use Cases</span>
-        <h2>Built for any app that needs<br /><span class="gradient-text">identity verification</span></h2>
+        <h2>Built for any app that needs identity verification</h2>
       </div>
       <div class="use-cases-grid">
         <div class="use-case">
@@ -442,7 +545,7 @@ dependencies:
         </div>
         <div class="use-case">
           <div class="use-icon">🏦</div>
-          <h3>KYC & Onboarding</h3>
+          <h3>KYC &amp; Onboarding</h3>
           <p>Verify users during app onboarding. Combine with ID documents for full KYC.</p>
         </div>
         <div class="use-case">
@@ -474,11 +577,10 @@ dependencies:
     <div class="container">
       <div class="section-header">
         <span class="section-tag">Pricing</span>
-        <h2>One-time or monthly.<br /><span class="gradient-text">You choose.</span></h2>
-        <p>License tied to your app package name — no per-user or per-scan fees. Not sure yet? Try free for 10 days.</p>
+        <h2>One-time or monthly. You choose.</h2>
+        <p>License tied to your app package name — no per-user or per-scan fees.</p>
       </div>
 
-      <!-- Trial CTA banner -->
       <div class="trial-banner">
         <div class="trial-banner-text">
           <span class="trial-icon">🎁</span>
@@ -494,8 +596,6 @@ dependencies:
       </div>
 
       <div class="pricing-grid pricing-grid-two">
-
-        <!-- Monthly -->
         <div class="pricing-card">
           <div class="pricing-badge">Monthly</div>
           <div class="pricing-price">$1<span class="pricing-price-small">/mo</span></div>
@@ -508,12 +608,9 @@ dependencies:
             <li>✓ Commercial use</li>
             <li>✓ Cancel anytime</li>
           </ul>
-          <button class="btn btn-outline btn-block" onclick="openModal('monthly')">
-            Get Monthly License
-          </button>
+          <button class="btn btn-outline btn-block" onclick="openModal('monthly')">Get Monthly License</button>
         </div>
 
-        <!-- Lifetime -->
         <div class="pricing-card pricing-card-featured">
           <div class="pricing-best-value">Best Value</div>
           <div class="pricing-badge pricing-badge-featured">Lifetime</div>
@@ -527,11 +624,17 @@ dependencies:
             <li>✓ Commercial use</li>
             <li>✓ All future updates</li>
           </ul>
-          <button class="btn btn-primary btn-block" onclick="openModal('lifetime')">
-            Get Lifetime License
-          </button>
+          <!-- Package name binding explanation -->
+          <div class="license-bound-box">
+            <div class="lbb-label">License bound to</div>
+            <div class="lbb-package">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+              com.<span class="lbb-company">yourcompany</span>.appname
+            </div>
+            <div class="lbb-note">One license = one package name. Need more? <a href="mailto:support@facenova.uk">Contact us.</a></div>
+          </div>
+          <button class="btn btn-primary btn-block" onclick="openModal('lifetime')">Get Lifetime License</button>
         </div>
-
       </div>
 
       <p class="pricing-note">Need multiple package names or a custom deal? <a href="mailto:support@facenova.uk">Contact us.</a></p>
@@ -572,21 +675,19 @@ dependencies:
       <div class="footer-bottom">
         <p>© 2026 FaceNova. All rights reserved.</p>
         <div class="footer-legal">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Service</a>
+          <a onclick="openLegalModal('privacy')">Privacy Policy</a>
+          <a onclick="openLegalModal('terms')">Terms of Service</a>
         </div>
       </div>
     </div>
   </footer>
 
   <!-- ══════════════════════════════════════════
-       MODALS
+       MODALS — Purchase
   ══════════════════════════════════════════ -->
-
-  <!-- Overlay -->
   <div class="modal-overlay" id="modal-overlay" onclick="closeModal()"></div>
 
-  <!-- ── Trial Modal ── -->
+  <!-- Trial -->
   <div class="modal" id="modal-trial" role="dialog" aria-modal="true" aria-labelledby="modal-trial-title">
     <div class="modal-header">
       <div>
@@ -617,14 +718,14 @@ dependencies:
       </div>
       <button type="submit" class="btn btn-primary btn-block btn-lg">
         <span class="modal-btn-text">Get My Free Trial</span>
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </button>
       <p class="form-note">Your 10-day license key will arrive in your inbox within 24 hours.</p>
       <div class="form-success" style="display:none"></div>
     </form>
   </div>
 
-  <!-- ── Monthly Modal ── -->
+  <!-- Monthly -->
   <div class="modal" id="modal-monthly" role="dialog" aria-modal="true" aria-labelledby="modal-monthly-title">
     <div class="modal-header">
       <div>
@@ -655,14 +756,14 @@ dependencies:
       </div>
       <button type="submit" class="btn btn-primary btn-block btn-lg">
         <span class="modal-btn-text">Get Monthly License — $1/mo</span>
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </button>
       <p class="form-note">We'll reply within 24 hours with your license key and payment link.</p>
       <div class="form-success" style="display:none"></div>
     </form>
   </div>
 
-  <!-- ── Lifetime Modal ── -->
+  <!-- Lifetime -->
   <div class="modal" id="modal-lifetime" role="dialog" aria-modal="true" aria-labelledby="modal-lifetime-title">
     <div class="modal-header">
       <div>
@@ -693,11 +794,121 @@ dependencies:
       </div>
       <button type="submit" class="btn btn-primary btn-block btn-lg">
         <span class="modal-btn-text">Get Lifetime License — $500</span>
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </button>
       <p class="form-note">We'll reply within 24 hours with your license key and a one-time payment link.</p>
       <div class="form-success" style="display:none"></div>
     </form>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       MODALS — Legal
+  ══════════════════════════════════════════ -->
+
+  <!-- Privacy Policy -->
+  <div class="modal modal-legal" id="modal-privacy" role="dialog" aria-modal="true">
+    <div class="modal-header">
+      <div>
+        <div class="modal-tag privacy-tag">Privacy Policy</div>
+        <h2>Privacy Policy</h2>
+        <p>Last updated: January 2026</p>
+      </div>
+      <button class="modal-close" onclick="closeModal()" aria-label="Close">&times;</button>
+    </div>
+    <div class="modal-legal-body">
+      <h3>1. Overview</h3>
+      <p>FaceNova SDK processes all biometric data entirely on the user's device. We do not collect, transmit, or store facial images or biometric templates on any server.</p>
+
+      <h3>2. Data Processed by the SDK</h3>
+      <p>The FaceNova SDK operates entirely on-device. It does not send any face images, liveness scores, or biometric embeddings to FaceNova's servers or any third party.</p>
+      <ul>
+        <li><strong>On-device only:</strong> Face frames are captured and processed in memory, then immediately discarded after the liveness check completes.</li>
+        <li><strong>No cloud processing:</strong> All TFLite model inference runs locally on Android/iOS hardware.</li>
+        <li><strong>Face templates:</strong> The 512-byte embeddings returned via <code>result.faceTemplate</code> are your responsibility to store securely within your own infrastructure.</li>
+      </ul>
+
+      <h3>3. License Validation</h3>
+      <p>License keys are validated via Firebase Remote Config. This process sends your app's package name to Firebase to verify the license — no user biometric data is involved. See Google's Firebase Privacy Policy for details on how Firebase handles this data.</p>
+
+      <h3>4. Analytics &amp; Crash Reporting</h3>
+      <p>The SDK includes no analytics or crash reporting. Your app may independently use Firebase Crashlytics or similar tools — those are governed by their own respective privacy policies.</p>
+
+      <h3>5. Developer Data (License Requests)</h3>
+      <p>When you request a license through facenova.dev, we collect:</p>
+      <ul>
+        <li>Your name and email address</li>
+        <li>Your app's package name</li>
+        <li>Any message you choose to include</li>
+      </ul>
+      <p>This data is used solely to issue and manage your license key. It is not sold or shared with third parties. We use Web3Forms to process form submissions; see their privacy policy for details.</p>
+
+      <h3>6. GDPR Compliance</h3>
+      <p>FaceNova SDK is designed to support GDPR compliance. Since all biometric processing occurs on-device and no biometric data is transmitted to FaceNova, you retain full control over your users' data. As the app developer integrating the SDK, you are the data controller for any face templates you choose to store.</p>
+
+      <h3>7. Data Retention</h3>
+      <p>We retain your contact information (name, email, package name) for as long as your license is active plus 12 months. You may request deletion at any time by emailing <a href="mailto:privacy@facenova.uk">privacy@facenova.uk</a>.</p>
+
+      <h3>8. Children's Privacy</h3>
+      <p>FaceNova SDK is intended for use in apps targeting users aged 13 and over. If your application targets children, you are responsible for ensuring your use of the SDK complies with applicable children's privacy laws (COPPA, GDPR-K, etc.).</p>
+
+      <h3>9. Contact</h3>
+      <p>For privacy-related questions or data deletion requests, please contact: <a href="mailto:privacy@facenova.uk">privacy@facenova.uk</a></p>
+    </div>
+  </div>
+
+  <!-- Terms of Service -->
+  <div class="modal modal-legal" id="modal-terms" role="dialog" aria-modal="true">
+    <div class="modal-header">
+      <div>
+        <div class="modal-tag terms-tag">Terms of Service</div>
+        <h2>Terms of Service</h2>
+        <p>Last updated: January 2026</p>
+      </div>
+      <button class="modal-close" onclick="closeModal()" aria-label="Close">&times;</button>
+    </div>
+    <div class="modal-legal-body">
+      <h3>1. License Grant</h3>
+      <p>Upon purchase or trial activation, FaceNova grants you a non-exclusive, non-transferable license to use the FaceNova SDK ("Software") within the single application identified by the package name specified at the time of purchase.</p>
+
+      <h3>2. Restrictions</h3>
+      <ul>
+        <li>You may not redistribute, resell, sublicense, or transfer the SDK to any third party.</li>
+        <li>You may not reverse engineer, decompile, disassemble, or attempt to extract source code from the SDK or its encrypted model files.</li>
+        <li>You may not use a single license for multiple app package names.</li>
+        <li>You may not use the SDK in applications that facilitate unlawful surveillance, discrimination, or violation of individuals' rights.</li>
+        <li>You may not remove or alter any proprietary notices within the SDK.</li>
+      </ul>
+
+      <h3>3. Trial License</h3>
+      <p>Trial licenses are valid for 10 calendar days from the date of activation and are provided for evaluation purposes only. Commercial or production use requires a paid license.</p>
+
+      <h3>4. Monthly License</h3>
+      <p>Monthly licenses are billed at $1 USD per month per app package name. Licenses renew automatically and may be cancelled at any time. Access continues until the end of the then-current paid period.</p>
+
+      <h3>5. Lifetime License</h3>
+      <p>A Lifetime license grants perpetual access to the current version of the SDK and all future updates for the specified package name, for a one-time fee of $500 USD. "Perpetual" means the license does not expire as long as you comply with these Terms.</p>
+
+      <h3>6. Updates &amp; Support</h3>
+      <p>FaceNova will make commercially reasonable efforts to provide updates that maintain compatibility with current Flutter and OS versions. Lifetime license holders receive all future SDK updates at no additional cost. Monthly license holders receive updates while their subscription is active. FaceNova reserves the right to modify pricing for new license purchases.</p>
+
+      <h3>7. Intellectual Property</h3>
+      <p>The SDK, including all TFLite model files, encryption, and source code, remains the exclusive property of FaceNova. These Terms do not grant you any rights to trademarks, service marks, or other branding of FaceNova.</p>
+
+      <h3>8. Disclaimer of Warranties</h3>
+      <p>THE SDK IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT. FACENOVA DOES NOT WARRANT THAT THE SDK WILL MEET YOUR REQUIREMENTS, OPERATE WITHOUT INTERRUPTION OR ERROR, OR THAT ANY DEFECTS WILL BE CORRECTED.</p>
+
+      <h3>9. Limitation of Liability</h3>
+      <p>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL FACENOVA BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES. FACENOVA'S TOTAL LIABILITY ARISING OUT OF OR RELATED TO THESE TERMS SHALL NOT EXCEED THE AMOUNT PAID BY YOU FOR THE LICENSE IN THE THREE MONTHS PRECEDING THE CLAIM.</p>
+
+      <h3>10. Termination</h3>
+      <p>FaceNova may terminate your license immediately upon written notice if you materially breach these Terms and fail to cure such breach within 14 days of notification. Upon termination, you must cease all use of the SDK and delete all copies in your possession.</p>
+
+      <h3>11. Governing Law</h3>
+      <p>These Terms shall be governed by and construed in accordance with the laws of England and Wales, without regard to its conflict of law provisions. Any disputes shall be subject to the exclusive jurisdiction of the courts of England and Wales.</p>
+
+      <h3>12. Contact</h3>
+      <p>For licensing or legal questions: <a href="mailto:support@facenova.uk">support@facenova.uk</a></p>
+    </div>
   </div>
 
   <script src="script.js"></script>
