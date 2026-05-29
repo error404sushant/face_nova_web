@@ -150,6 +150,7 @@ img { max-width: 100%; }
 }
 .logo strong { color: var(--text); }
 .logo-icon { font-size: 1.3rem; line-height: 1; }
+.logo-img { width: 28px; height: 28px; object-fit: contain; }
 
 .nav-links { display: flex; align-items: center; gap: 2px; list-style: none; }
 .nav-links a {
@@ -467,6 +468,107 @@ img { max-width: 100%; }
   .pubdev-stats { flex-wrap: wrap; }
   .pubdev-cta { width: 100%; }
   .pubdev-btn { width: 100%; justify-content: center; }
+}
+
+/* ── Flutter Package Block ── */
+.flutter-pkg-block {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin: 20px 0 16px;
+  overflow: hidden;
+  transition: border-color 0.15s;
+}
+.flutter-pkg-block:hover { border-color: var(--border-2); }
+
+.flutter-pkg-top {
+  display: flex; align-items: center; gap: 20px;
+  padding: 18px 24px; flex-wrap: wrap;
+  border-bottom: 1px solid var(--border);
+}
+
+.flutter-pkg-actions {
+  display: flex; align-items: center; gap: 10px;
+  padding: 14px 24px; flex-wrap: wrap;
+  background: rgba(0,0,0,0.1);
+}
+[data-theme="light"] .flutter-pkg-actions { background: rgba(0,0,0,0.03); }
+
+.fpkg-btn {
+  display: inline-flex; align-items: center; gap: 7px;
+  padding: 8px 16px; border-radius: var(--radius-xs);
+  font-size: 0.82rem; font-weight: 600;
+  border: 1px solid transparent;
+  cursor: pointer; transition: all 0.15s;
+  text-decoration: none; white-space: nowrap; line-height: 1.4;
+}
+.fpkg-btn-pubdev {
+  background: rgba(1,117,194,0.1);
+  border-color: rgba(1,117,194,0.3);
+  color: #0175C2;
+}
+[data-theme="light"] .fpkg-btn-pubdev { color: #015fa3; }
+.fpkg-btn-pubdev:hover { background: rgba(1,117,194,0.18); border-color: rgba(1,117,194,0.5); }
+
+.fpkg-btn-github {
+  background: var(--surface-2);
+  border-color: var(--border);
+  color: var(--text-muted);
+}
+.fpkg-btn-github:hover { background: var(--surface-3); border-color: var(--border-2); color: var(--text); }
+
+.fpkg-btn-demo {
+  background: var(--green-dim);
+  border-color: var(--green-border);
+  color: var(--green);
+  margin-left: auto;
+}
+.fpkg-btn-demo:hover { background: rgba(34,197,94,0.15); border-color: rgba(34,197,94,0.4); }
+
+/* ── Native SDK Row (iOS / Android Coming Soon) ── */
+.native-sdk-row {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 12px; margin-bottom: 20px;
+}
+.native-sdk-card {
+  display: flex; align-items: center; gap: 14px;
+  padding: 16px 20px;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: border-color 0.15s;
+}
+.native-sdk-card:hover { border-color: var(--border-2); }
+
+.native-sdk-icon {
+  width: 46px; height: 46px; border-radius: 12px;
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.android-icon { background: rgba(61,220,132,0.1); border: 1px solid rgba(61,220,132,0.2); }
+.ios-icon { background: var(--surface-2); border: 1px solid var(--border); }
+[data-theme="light"] .ios-icon svg { opacity: 0.7; }
+
+.native-sdk-info { flex: 1; min-width: 0; }
+.native-sdk-label { font-size: 0.875rem; font-weight: 600; color: var(--text); }
+.native-sdk-sub { font-size: 0.74rem; color: var(--text-dim); margin-top: 2px; }
+
+.coming-soon-badge {
+  display: inline-flex; align-items: center;
+  padding: 4px 10px; border-radius: 50px;
+  font-size: 0.66rem; font-weight: 700; letter-spacing: 0.07em;
+  text-transform: uppercase; white-space: nowrap;
+  background: rgba(234,179,8,0.08);
+  border: 1px solid rgba(234,179,8,0.22);
+  color: #ca8a04;
+  flex-shrink: 0;
+}
+[data-theme="light"] .coming-soon-badge { color: #92400e; background: rgba(234,179,8,0.06); }
+
+@media (max-width: 640px) {
+  .flutter-pkg-top { gap: 14px; }
+  .pubdev-stats { display: none; }
+  .flutter-pkg-actions { padding: 12px 16px; }
+  .fpkg-btn-demo { margin-left: 0; width: 100%; justify-content: center; }
+  .native-sdk-row { grid-template-columns: 1fr; }
 }
 
 /* ════════════════════════════════
