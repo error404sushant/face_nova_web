@@ -396,6 +396,30 @@ img { max-width: 100%; }
 .trust-logo-link:hover { color: #0175C2; border-bottom-color: rgba(1,117,194,0.35); }
 
 /* ════════════════════════════════
+   CLIENTS BAR
+════════════════════════════════ */
+.clients-bar {
+  padding: 28px 0;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-2);
+}
+.clients-logos { display: flex; align-items: center; justify-content: center; gap: 40px; flex-wrap: wrap; }
+.client-logo-link {
+  display: flex; align-items: center; gap: 10px;
+  text-decoration: none; color: var(--text-muted);
+  font-size: 0.9rem; font-weight: 600;
+  transition: opacity 0.15s;
+  opacity: 0.75;
+}
+.client-logo-link:hover { opacity: 1; }
+.client-logo-img { height: 36px; width: auto; object-fit: contain; filter: grayscale(0.3); }
+[data-theme="dark"] .client-logo-img { filter: brightness(0.9) grayscale(0.2); }
+.client-logo-fallback {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 0.88rem; font-weight: 600; color: var(--text-muted);
+}
+
+/* ════════════════════════════════
    PUB.DEV SECTION
 ════════════════════════════════ */
 .pubdev-section {
