@@ -278,7 +278,7 @@
               </svg>
             </div>
             <div>
-              <div class="pubdev-pkg-name">flutter_biometric_liveness</div>
+              <div class="pubdev-pkg-name">flutter_face_nova</div>
               <div class="pubdev-pkg-sub">pub.dev · Dart &amp; Flutter package</div>
             </div>
           </div>
@@ -308,7 +308,7 @@
         <!-- Flutter action buttons -->
         <div class="flutter-pkg-actions">
           <a class="fpkg-btn fpkg-btn-pubdev"
-             href="https://pub.dev/packages/flutter_biometric_liveness"
+             href="https://pub.dev/packages/flutter_face_nova"
              target="_blank" rel="noopener">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none">
               <path d="M14.314 0L2.3 12 6 15.7 21.684.013z" fill="#54C5F8"/>
@@ -320,7 +320,7 @@
           </a>
 
           <a class="fpkg-btn fpkg-btn-github"
-             href="https://github.com/error404sushant/flutter_biometric_liveness"
+             href="https://github.com/facenova/flutter_face_nova"
              target="_blank" rel="noopener">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
             GitHub
@@ -328,7 +328,7 @@
           </a>
 
           <a class="fpkg-btn fpkg-btn-demo"
-             href="https://github.com/error404sushant/flutter_biometric_liveness/releases/download/v1.0.0/app-release.apk"
+             href="https://github.com/facenova/flutter_face_nova/releases/download/v1.0.0/app-release.apk"
              download>
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 16l-5-5h3V4h4v7h3l-5 5z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M5 20h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
             Download Demo APK
@@ -427,10 +427,9 @@
           </div>
           <h3>3-Line Integration</h3>
           <div class="mini-code">
-            <pre><span class="c-blue">await</span> VideoLiveness.initFaceRecognition();
-<span class="c-blue">await</span> VideoLiveness.launch(context: context, onResult: <span class="c-green">(r)</span> {
-  <span class="c-comment">// r.passed, r.faceTemplate, r.livenessPct</span>
-});</pre>
+            <pre><span class="c-blue">await</span> FlutterFaceNova.initialize(licenseKey: licenseKey);
+<span class="c-blue">final</span> result = <span class="c-blue">await</span> FlutterFaceNova.startLiveness(context);
+<span class="c-comment">// result.isReal, result.score, result.imageBytes</span></pre>
           </div>
         </div>
       </div>
@@ -533,7 +532,10 @@
             </div>
             <pre><span class="c-comment"># Add to your pubspec.yaml</span>
 dependencies:
-  <span class="c-green">video_liveness</span>: ^1.0.0</pre>
+  <span class="c-green">flutter_face_nova</span>:
+    git:
+      url: https://github.com/facenova/flutter_face_nova.git
+  permission_handler: ^11.4.0</pre>
           </div>
         </div>
 
@@ -546,9 +548,10 @@ dependencies:
             <pre><span class="c-blue">void</span> main() <span class="c-blue">async</span> {
   WidgetsFlutterBinding.ensureInitialized();
 
-  <span class="c-comment">// Initialize once at startup — loads the face model</span>
-  <span class="c-blue">await</span> VideoLiveness.initFaceRecognition();
+  <span class="c-comment">// Verify license and prepare models — call once at startup</span>
+  <span class="c-blue">await</span> FlutterFaceNova.initialize(licenseKey: <span class="c-str">'YOUR_LICENSE_KEY'</span>);
 
+  <span class="c-blue">await</span> Permission.camera.request();
   runApp(MyApp());
 }</pre>
           </div>
@@ -557,20 +560,21 @@ dependencies:
         <div class="tab-content" id="tab-launch">
           <div class="code-block">
             <div class="code-header">
-              <span>attendance_screen.dart</span>
+              <span>liveness_screen.dart</span>
               <button class="copy-btn" data-copy="launch">Copy</button>
             </div>
-            <pre><span class="c-blue">await</span> VideoLiveness.launch(
-  context: context,
-  onResult: (LivenessResult result) {
-    <span class="c-blue">if</span> (result.passed && result.livenessPct >= <span class="c-num">70</span>) {
-      <span class="c-comment">// result.faceTemplate  → 512-byte embedding</span>
-      <span class="c-comment">// result.capturedFrame → JPEG of the face</span>
-      <span class="c-comment">// result.livenessPct   → confidence score</span>
-    }
-  },
-  onError: (error) => print(error),
-);</pre>
+            <pre><span class="c-blue">final</span> LivenessResult? result = <span class="c-blue">await</span> FlutterFaceNova.startLiveness(context);
+
+<span class="c-blue">if</span> (result == <span class="c-blue">null</span>) <span class="c-blue">return</span>; <span class="c-comment">// user cancelled</span>
+
+<span class="c-blue">if</span> (!result.isReal) {
+  print(<span class="c-str">'Spoof detected. Score: ${(result.score * 100).toStringAsFixed(1)}%'</span>);
+  <span class="c-blue">return</span>;
+}
+
+<span class="c-comment">// result.score       → liveness confidence (0.0–1.0)</span>
+<span class="c-comment">// result.imageBytes  → JPEG of the verified face</span>
+print(<span class="c-str">'Real face confirmed: ${(result.score * 100).toStringAsFixed(1)}%'</span>);</pre>
           </div>
         </div>
 
@@ -580,16 +584,20 @@ dependencies:
               <span>face_matching.dart</span>
               <button class="copy-btn" data-copy="compare">Copy</button>
             </div>
-            <pre><span class="c-comment">// Compare two face templates (pure Dart, &lt;1ms)</span>
-<span class="c-blue">final</span> score = VideoLiveness.compareFaces(
-  enrolledTemplate,  <span class="c-comment">// Uint8List from enrollment</span>
-  liveTemplate,      <span class="c-comment">// Uint8List from scan</span>
+            <pre><span class="c-comment">// Liveness + match in a single camera session</span>
+<span class="c-blue">final</span> FaceMatchResult? match = <span class="c-blue">await</span> FlutterFaceNova.startLivenessAndMatch(
+  context,
+  enrolledFaces:  myEnrolledFaces,
+  matchThreshold: <span class="c-num">75.0</span>,
 );
 
-<span class="c-comment">// score ∈ [0.0, 1.0]</span>
-<span class="c-blue">if</span> (score >= <span class="c-num">0.65</span>) {
-  print(<span class="c-str">'✅ Match confirmed'</span>);
-}</pre>
+<span class="c-blue">if</span> (match != <span class="c-blue">null</span> && match.isMatch) {
+  print(<span class="c-str">'Identity verified: ${match.matchedFace?.name} (${match.score.toStringAsFixed(1)}%)'</span>);
+}
+
+<span class="c-comment">// Or compare two embeddings directly (no camera, pure Dart)</span>
+<span class="c-blue">final</span> <span class="c-blue">double</span> score = FlutterFaceNova.compareFaceMetadata(meta1.metadata, meta2.metadata);
+<span class="c-comment">// Returns 0–100. ≥ 75 is a confident match.</span></pre>
           </div>
         </div>
       </div>
@@ -735,7 +743,7 @@ dependencies:
         </div>
         <div class="footer-links">
           <h4>Resources</h4>
-          <a href="https://pub.dev/packages/flutter_biometric_liveness" target="_blank" rel="noopener">pub.dev Package</a>
+          <a href="https://pub.dev/packages/flutter_face_nova" target="_blank" rel="noopener">pub.dev Package</a>
           <a href="mailto:support@facenova.uk">Support</a>
         </div>
         <div class="footer-links">
