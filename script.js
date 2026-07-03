@@ -11,8 +11,8 @@ const SUPPORT_EMAIL  = 'support@facenova.uk';
 const html         = document.documentElement;
 const themeToggle  = document.getElementById('theme-toggle');
 
-// Restore saved theme (default: dark)
-const savedTheme = localStorage.getItem('fn-theme') || 'dark';
+// Restore saved theme (default: light)
+const savedTheme = localStorage.getItem('fn-theme') || 'light';
 html.setAttribute('data-theme', savedTheme);
 
 themeToggle.addEventListener('click', () => {
@@ -95,7 +95,7 @@ document.querySelectorAll('.copy-btn').forEach(btn => {
   [pdLikes, pdPoints, pdPop].forEach(el => el.classList.add('loading'));
 
   try {
-    const res  = await fetch('https://pub.dev/api/packages/flutter_biometric_liveness/score', {
+    const res  = await fetch('https://pub.dev/api/packages/flutter_face_nova/score', {
       headers: { 'Accept': 'application/json' }
     });
     if (!res.ok) throw new Error('fetch failed');
@@ -192,9 +192,17 @@ const planConfig = {
     subject: name => `FaceNova Monthly License Request — ${name}`,
     successNote: "✅ Monthly request sent! We'll reply within 24 hours with your license key and payment link.",
   },
+  'lifetime-single': {
+    subject: name => `FaceNova Lifetime License (1 App) Request — ${name}`,
+    successNote: "✅ Sent! We'll reply within 24 hours with your license key and a $10 payment link.",
+  },
   lifetime: {
-    subject: name => `FaceNova Lifetime License Request — ${name}`,
-    successNote: "✅ Lifetime request sent! We'll reply within 24 hours with a one-time payment link.",
+    subject: name => `FaceNova Lifetime License (1 App) Request — ${name}`,
+    successNote: "✅ Sent! We'll reply within 24 hours with your license key and a $10 payment link.",
+  },
+  'lifetime-bundle': {
+    subject: name => `FaceNova Lifetime Bundle (10 Apps) Request — ${name}`,
+    successNote: "✅ Bundle request sent! We'll reply within 24 hours with your license keys and a $49 payment link.",
   },
 };
 

@@ -1,27 +1,35 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- SEO -->
-  <title>FaceNova — Face Liveness Detection SDK for Flutter & Mobile</title>
-  <meta name="description" content="FaceNova is a powerful face liveness detection and recognition SDK for Flutter, Android & iOS. Stop spoofing attacks with real-time passive liveness, face matching, and easy integration." />
-  <meta name="keywords" content="face liveness detection, flutter SDK, anti-spoofing, face recognition, biometric SDK, flutter face detection, liveness check, mobile SDK" />
+  <!-- Primary SEO -->
+  <title>FaceNova SDK — Face Liveness Detection &amp; Anti-Spoofing for Flutter, Android &amp; iOS</title>
+  <meta name="description" content="FaceNova is a passive face liveness detection and face recognition SDK for Flutter, Android &amp; iOS. Integrates in 3 lines of code. Blocks photo attacks, video replays and 3D masks. On-device AI, no cloud required. From $10 one-time." />
+  <meta name="keywords" content="face liveness detection SDK, flutter face liveness, anti-spoofing SDK, face recognition flutter, passive liveness check, biometric SDK flutter, flutter face detection, liveness detection android, liveness detection iOS, react native face liveness, on-device face recognition, GDPR biometric SDK, face matching flutter, flutter_face_nova" />
   <meta name="author" content="FaceNova" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#2563eb" />
   <link rel="canonical" href="https://facenova.dev/" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="FaceNova — Face Liveness Detection SDK" />
-  <meta property="og:description" content="Passive liveness detection + face recognition SDK for Flutter, Android & iOS. Easy integration. Secure. Fast." />
+  <meta property="og:title" content="FaceNova SDK — Passive Face Liveness Detection for Flutter &amp; Mobile" />
+  <meta property="og:description" content="Add face liveness detection to Flutter, Android or iOS in minutes. Passive anti-spoofing, face recognition, on-device AI. No cloud. From $10." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://facenova.dev/" />
   <meta property="og:image" content="https://facenova.dev/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="FaceNova SDK" />
+  <meta property="og:locale" content="en_US" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="FaceNova — Face Liveness Detection SDK" />
-  <meta name="twitter:description" content="Passive liveness detection + face recognition for Flutter & Mobile." />
+  <meta name="twitter:site" content="@facenova_sdk" />
+  <meta name="twitter:title" content="FaceNova SDK — Face Liveness Detection for Flutter &amp; Mobile" />
+  <meta name="twitter:description" content="Passive liveness detection + face recognition for Flutter, Android &amp; iOS. 3-line integration. On-device AI. No cloud. From $10." />
+  <meta name="twitter:image" content="https://facenova.dev/og-image.png" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -30,16 +38,111 @@
 
   <link rel="stylesheet" href="style.css" />
 
-  <!-- Structured Data -->
+  <!-- Structured Data: SoftwareApplication -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     "name": "FaceNova SDK",
+    "url": "https://facenova.dev",
     "applicationCategory": "DeveloperApplication",
-    "operatingSystem": "Android, iOS, Flutter",
-    "description": "Face liveness detection and recognition SDK for mobile applications",
-    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    "operatingSystem": "Android, iOS",
+    "runtimePlatform": "Flutter, Dart, Kotlin, Swift",
+    "description": "Passive face liveness detection and face recognition SDK for Flutter, Android and iOS. Block photo attacks, video replays and 3D masks with on-device AI. GDPR compliant, no cloud required.",
+    "featureList": [
+      "Passive liveness detection — no user actions needed",
+      "Anti-spoofing against photos, video replays and 3D masks",
+      "Face recognition with 128-dimension embeddings",
+      "On-device inference — no data sent to servers",
+      "GDPR compliant by design",
+      "3-line Flutter integration",
+      "Android and iOS support",
+      "Works offline"
+    ],
+    "screenshot": "https://facenova.dev/og-image.png",
+    "softwareVersion": "1.0.0",
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Monthly License",
+        "price": "1",
+        "priceCurrency": "USD",
+        "priceSpecification": { "@type": "UnitPriceSpecification", "price": "1", "priceCurrency": "USD", "unitText": "month" }
+      },
+      {
+        "@type": "Offer",
+        "name": "Lifetime License — Single App",
+        "price": "10",
+        "priceCurrency": "USD",
+        "description": "One-time payment for 1 app package name, perpetual access"
+      },
+      {
+        "@type": "Offer",
+        "name": "Lifetime License — Bundle (10 apps)",
+        "price": "49",
+        "priceCurrency": "USD",
+        "description": "One-time payment for up to 10 app package names, perpetual access"
+      }
+    ],
+    "author": { "@type": "Organization", "name": "FaceNova", "url": "https://facenova.dev" }
+  }
+  </script>
+
+  <!-- Structured Data: FAQ (helps get featured snippets in Google) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is face liveness detection?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Face liveness detection verifies that the person in front of the camera is a real, living human — not a photo, video replay, or 3D mask. FaceNova's passive liveness check works from a single frame with no user action required."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does FaceNova send face images to a server?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. All AI inference runs entirely on the device using on-device TFLite models. No face images, liveness scores, or biometric embeddings are ever sent to FaceNova's servers. This makes it GDPR-compliant by design."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I add FaceNova to a Flutter app?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Add flutter_face_nova to your pubspec.yaml, call FlutterFaceNova.initialize(licenseKey: 'YOUR_KEY') at startup, then call FlutterFaceNova.startLiveness(context) to launch the liveness check. That's 3 lines of integration."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does FaceNova work without internet?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. All face processing runs on-device and works fully offline. The only network call is a one-time license validation on first launch."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What platforms does FaceNova support?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "FaceNova currently supports Flutter (Android and iOS) via the flutter_face_nova pub.dev package. Native Android SDK and native iOS SDK are coming soon. React Native and other frameworks are available on request."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the pricing for FaceNova SDK?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "FaceNova offers three plans: a free 10-day trial, a monthly plan at $1/month per app, and lifetime plans — $10 one-time for 1 app package name, or $49 one-time for up to 10 app package names."
+        }
+      }
+    ]
   }
   </script>
 </head>
@@ -154,11 +257,11 @@
                 <div class="scan-line"></div>
                 <div class="face-icon">
                   <svg viewBox="0 0 120 140" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <ellipse cx="60" cy="68" rx="36" ry="46" stroke="rgba(99,102,241,0.5)" stroke-width="1.5"/>
-                    <circle cx="46" cy="60" r="4.5" fill="rgba(99,102,241,0.7)"/>
-                    <circle cx="74" cy="60" r="4.5" fill="rgba(99,102,241,0.7)"/>
-                    <path d="M46 84 Q60 96 74 84" stroke="rgba(99,102,241,0.7)" stroke-width="2" stroke-linecap="round" fill="none"/>
-                    <ellipse cx="60" cy="32" rx="18" ry="16" stroke="rgba(99,102,241,0.25)" stroke-width="1.2"/>
+                    <ellipse cx="60" cy="68" rx="36" ry="46" stroke="rgba(37,99,235,0.5)" stroke-width="1.5"/>
+                    <circle cx="46" cy="60" r="4.5" fill="rgba(37,99,235,0.7)"/>
+                    <circle cx="74" cy="60" r="4.5" fill="rgba(37,99,235,0.7)"/>
+                    <path d="M46 84 Q60 96 74 84" stroke="rgba(37,99,235,0.7)" stroke-width="2" stroke-linecap="round" fill="none"/>
+                    <ellipse cx="60" cy="32" rx="18" ry="16" stroke="rgba(37,99,235,0.25)" stroke-width="1.2"/>
                   </svg>
                 </div>
               </div>
@@ -205,12 +308,12 @@
   <!-- ──────────────── LOGOS / TRUSTED ──────────────── -->
   <section class="trust-bar">
     <div class="container">
-      <p class="trust-label">Works seamlessly with</p>
+      <p class="trust-label">Available for</p>
       <div class="trust-logos">
 
-        <!-- Flutter — correct F-kite mark (3-path, simpleicons) -->
+        <!-- Flutter -->
         <div class="trust-logo">
-          <svg height="22" viewBox="0 0 24 24" fill="none">
+          <svg height="20" viewBox="0 0 24 24" fill="none">
             <path d="M14.314 0L2.3 12 6 15.7 21.684.013z" fill="#54C5F8"/>
             <path d="M14.314 11.07L7.857 17.53l6.47 6.47H21.7l-6.46-6.468 6.46-6.46h-7.386z" fill="#01579B"/>
             <path d="M7.857 17.53l3.745 3.744 3.957-3.744z" fill="#29B6F6"/>
@@ -218,23 +321,39 @@
           Flutter
         </div>
 
-        <!-- Android — official Bugdroid -->
+        <!-- Android -->
         <div class="trust-logo">
-          <svg height="22" viewBox="0 0 24 24" fill="#3DDC84">
+          <svg height="20" viewBox="0 0 24 24" fill="#3DDC84">
             <path d="M6 18c0 .55.45 1 1 1h1v3.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5V19h2v3.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5V19h1c.55 0 1-.45 1-1V8H6v10zm-2.5-2C2.67 16 2 15.33 2 14.5v-5C2 8.67 2.67 8 3.5 8S5 8.67 5 9.5v5c0 .83-.67 1.5-1.5 1.5zm17 0c-.83 0-1.5-.67-1.5-1.5v-5c0-.83.67-1.5 1.5-1.5S23 8.67 23 9.5v5c0 .83-.67 1.5-1.5 1.5zM15.53 2.16l1.3-1.3c.2-.2.2-.51 0-.71-.2-.2-.51-.2-.71 0l-1.48 1.48A5.84 5.84 0 0 0 12 1c-.57 0-1.11.08-1.63.23L8.88.15c-.2-.2-.51-.2-.71 0-.2.2-.2.51 0 .71l1.31 1.31A5.847 5.847 0 0 0 6 7h12a5.85 5.85 0 0 0-2.47-4.84zM10 5H9V4h1v1zm5 0h-1V4h1v1z"/>
           </svg>
           Android
         </div>
 
-        <!-- iOS — Apple logo -->
+        <!-- iOS -->
         <div class="trust-logo">
-          <svg height="22" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83zM13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" opacity=".75"/>
+          <svg height="20" viewBox="0 0 24 24" fill="currentColor" opacity=".7">
+            <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83zM13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
           </svg>
           iOS
         </div>
 
-        <!-- pub.dev removed from here, see pubdev-section below -->
+        <div class="trust-logo" title="Available on request">
+          <svg height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          React Native
+          <span style="font-size:0.62rem;background:var(--surface-2);border:1px solid var(--border);padding:1px 5px;border-radius:3px;margin-left:2px;color:var(--text-dim)">on request</span>
+        </div>
+
+        <div class="trust-logo" title="Kotlin native SDK on request">
+          <svg height="20" viewBox="0 0 24 24" fill="none"><path d="M2 2h10l10 10-10 10H2l10-10z" fill="url(#kt)" opacity=".85"/><defs><linearGradient id="kt" x1="2" y1="2" x2="22" y2="22"><stop offset="0%" stop-color="#7F52FF"/><stop offset="100%" stop-color="#E44857"/></linearGradient></defs></svg>
+          Kotlin
+          <span style="font-size:0.62rem;background:var(--surface-2);border:1px solid var(--border);padding:1px 5px;border-radius:3px;margin-left:2px;color:var(--text-dim)">on request</span>
+        </div>
+
+        <div class="trust-logo" title="Swift native SDK on request">
+          <svg height="20" viewBox="0 0 24 24" fill="#F05138"><path d="M20.7 15.5c.1-.3.2-.7.2-1 .1-1.6-.7-3.3-2.1-4.7 1 2.5.5 4.9-.9 6.5-.1.1-.3.3-.4.4-1.7 1.6-4.6 2.2-7.2.9l-.6-.3-2.9-1.8 6 2.8c2.1 1 4.6.4 6.4-1.2.5-.5.9-1 1.1-1.6h.4z"/><path d="M17.6 16.4c-.3.2-.6.4-.9.5-.9.3-1.9.3-2.9-.1l-8.5-4.3 2.2 1.8 5.8 3.2c.9.4 1.9.4 2.8.1.3-.1.6-.3.8-.5.5-.5.9-1.1 1.1-1.8-.2.4-.2.9-.4 1.1z"/><path d="M6.3 14.3c-1.4-1.8-1.8-4-.9-5.9L5 8.1c-.8 1.4-1.2 3.1-.7 4.8.3 1.1.9 2.1 1.7 2.9 1.1 1.1 2.7 1.9 4.4 2l.8.1-5-3.6zM15.9 4.1l.6.4c-3.1-1.8-7.2-1.7-10.1.7 0 0 3-2.2 6.9-1.7 1.9.3 3.3 1.1 4.3 2.1.9.9 1.4 2 1.5 3.1.1 1.6-.7 3.3-2 4.7l.3-.3c1.8-2 2.1-5.1.5-7.5-.4-.5-.9-1-.7-1.1l-.7-.7-.6-.5V4l-.6-.5V3.5l-.8-.5 1.4 1.1z"/></svg>
+          Swift
+          <span style="font-size:0.62rem;background:var(--surface-2);border:1px solid var(--border);padding:1px 5px;border-radius:3px;margin-left:2px;color:var(--text-dim)">on request</span>
+        </div>
 
       </div>
     </div>
@@ -658,10 +777,9 @@ print(<span class="c-str">'Real face confirmed: ${(result.score * 100).toStringA
     <div class="container">
       <div class="section-header">
         <span class="section-tag">Pricing</span>
-        <h2>One-time or monthly. You choose.</h2>
-        <p>License tied to your app package name — no per-user or per-scan fees.</p>
+        <h2>Simple, honest pricing.</h2>
+        <p>Pay once and own it forever, or start with $1/month. No per-scan fees, no hidden costs.</p>
       </div>
-
 
       <div class="trial-banner">
         <div class="trial-banner-text">
@@ -677,49 +795,134 @@ print(<span class="c-str">'Real face confirmed: ${(result.score * 100).toStringA
         </button>
       </div>
 
-      <div class="pricing-grid pricing-grid-two">
+      <div class="pricing-grid-three">
+
+        <!-- Monthly -->
         <div class="pricing-card">
           <div class="pricing-badge">Monthly</div>
           <div class="pricing-price">$1<span class="pricing-price-small">/mo</span></div>
-          <div class="pricing-period">per app package name · billed monthly</div>
+          <div class="pricing-period">per app · billed monthly · cancel anytime</div>
           <ul class="pricing-features">
             <li>✓ Full SDK access</li>
             <li>✓ 1 app package name</li>
-            <li>✓ Android + iOS</li>
+            <li>✓ Flutter (Android + iOS)</li>
             <li>✓ Email support</li>
             <li>✓ Commercial use</li>
-            <li>✓ Cancel anytime</li>
           </ul>
           <button class="btn btn-outline btn-block" onclick="openModal('monthly')">Get Monthly License</button>
         </div>
 
+        <!-- Lifetime single — featured -->
         <div class="pricing-card pricing-card-featured">
-          <div class="pricing-best-value">Best Value</div>
-          <div class="pricing-badge pricing-badge-featured">Lifetime</div>
-          <div class="pricing-price">$500<span class="pricing-price-small"> once</span></div>
-          <div class="pricing-period">one-time payment · up to 10 package names · forever</div>
+          <div class="pricing-best-value">Most Popular</div>
+          <div class="pricing-badge pricing-badge-featured">Lifetime — 1 App</div>
+          <div class="pricing-price">$10<span class="pricing-price-small"> once</span></div>
+          <div class="pricing-period">one-time · 1 package name · forever</div>
+          <ul class="pricing-features">
+            <li>✓ Full SDK access — forever</li>
+            <li>✓ 1 app package name</li>
+            <li>✓ Flutter (Android + iOS)</li>
+            <li>✓ All future updates</li>
+            <li>✓ Commercial use</li>
+          </ul>
+          <div class="license-bound-box">
+            <div class="lbb-label">License tied to</div>
+            <div class="lbb-package">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+              com.<span class="lbb-company">yourcompany</span>.appname
+            </div>
+            <div class="lbb-note">Need more apps? Go for the bundle below.</div>
+          </div>
+          <button class="btn btn-primary btn-block" onclick="openModal('lifetime')">Get Lifetime — $10</button>
+        </div>
+
+        <!-- Lifetime bundle -->
+        <div class="pricing-card">
+          <div class="pricing-badge">Lifetime — 10 Apps</div>
+          <div class="pricing-price">$49<span class="pricing-price-small"> once</span></div>
+          <div class="pricing-period">one-time · up to 10 package names · forever</div>
           <ul class="pricing-features">
             <li>✓ Full SDK access — forever</li>
             <li>✓ Up to 10 app package names</li>
-            <li>✓ Android + iOS</li>
+            <li>✓ Flutter (Android + iOS)</li>
             <li>✓ Priority support</li>
-            <li>✓ Commercial use</li>
             <li>✓ All future updates</li>
           </ul>
-          <!-- Package name binding explanation -->
           <div class="license-bound-box">
             <div class="lbb-label">License covers up to</div>
             <div class="lbb-package">
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
               10 × com.<span class="lbb-company">yourcompany</span>.appname
             </div>
-            <div class="lbb-note">Need more than 10 package names? <a href="mailto:support@facenova.uk">Contact us.</a></div>
+            <div class="lbb-note">Need more? <a href="mailto:support@facenova.uk">Contact us.</a></div>
           </div>
-          <button class="btn btn-primary btn-block" onclick="openModal('lifetime')">Get Lifetime License</button>
+          <button class="btn btn-outline btn-block" onclick="openModal('lifetime-bundle')">Get Bundle — $49</button>
         </div>
+
       </div>
 
-      <p class="pricing-note">Need more than 10 package names or a custom enterprise deal? <a href="mailto:support@facenova.uk">Contact us.</a></p>
+      <p class="pricing-note">Enterprise or custom package count? <a href="mailto:support@facenova.uk">Drop us an email.</a></p>
+    </div>
+  </section>
+
+  <!-- ──────────────── FAQ ──────────────── -->
+  <section class="section section-dark" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">FAQ</span>
+        <h2>Questions people actually ask</h2>
+      </div>
+      <div style="max-width:640px;margin:0 auto;display:flex;flex-direction:column;gap:12px;">
+
+        <details style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:16px 18px;cursor:pointer;">
+          <summary style="font-weight:600;font-size:0.9rem;color:var(--text);list-style:none;display:flex;justify-content:space-between;align-items:center;">
+            Does it work offline?
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </summary>
+          <p style="margin-top:10px;font-size:0.84rem;color:var(--text-muted);line-height:1.65;">Yes. Everything runs on-device. The only network call is a one-time license check on the very first launch. After that, the SDK works completely offline.</p>
+        </details>
+
+        <details style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:16px 18px;cursor:pointer;">
+          <summary style="font-weight:600;font-size:0.9rem;color:var(--text);list-style:none;display:flex;justify-content:space-between;align-items:center;">
+            Do face images get sent to a server?
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </summary>
+          <p style="margin-top:10px;font-size:0.84rem;color:var(--text-muted);line-height:1.65;">Never. All AI inference runs locally using on-device TFLite models. No face images, liveness scores, or biometric embeddings ever leave the device. GDPR compliance is baked in by design.</p>
+        </details>
+
+        <details style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:16px 18px;cursor:pointer;">
+          <summary style="font-weight:600;font-size:0.9rem;color:var(--text);list-style:none;display:flex;justify-content:space-between;align-items:center;">
+            What platforms are supported?
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </summary>
+          <p style="margin-top:10px;font-size:0.84rem;color:var(--text-muted);line-height:1.65;">Flutter (Android + iOS) is fully available right now via the <code style="font-family:var(--mono);font-size:0.82em;background:var(--surface-2);padding:1px 5px;border-radius:3px;">flutter_face_nova</code> package. Native Android SDK (Kotlin/Java .aar), native iOS framework (Swift), and React Native are all available on request — just email us.</p>
+        </details>
+
+        <details style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:16px 18px;cursor:pointer;">
+          <summary style="font-weight:600;font-size:0.9rem;color:var(--text);list-style:none;display:flex;justify-content:space-between;align-items:center;">
+            What spoofing attacks does it block?
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </summary>
+          <p style="margin-top:10px;font-size:0.84rem;color:var(--text-muted);line-height:1.65;">FaceNova blocks printed photo attacks, digital screen replays (phone/tablet/laptop), and 3D masks. The passive liveness model analyses texture, depth cues, and moiré patterns from a single frame — no blinking or head-turning needed from the user.</p>
+        </details>
+
+        <details style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:16px 18px;cursor:pointer;">
+          <summary style="font-weight:600;font-size:0.9rem;color:var(--text);list-style:none;display:flex;justify-content:space-between;align-items:center;">
+            How does the lifetime license work?
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </summary>
+          <p style="margin-top:10px;font-size:0.84rem;color:var(--text-muted);line-height:1.65;">You pay once — $10 for 1 app, $49 for up to 10 apps — and get a license key tied to your package name(s). It never expires and includes all future SDK updates. No subscriptions, no renewal reminders.</p>
+        </details>
+
+        <details style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:16px 18px;cursor:pointer;">
+          <summary style="font-weight:600;font-size:0.9rem;color:var(--text);list-style:none;display:flex;justify-content:space-between;align-items:center;">
+            How long does it take to receive a license key?
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </summary>
+          <p style="margin-top:10px;font-size:0.84rem;color:var(--text-muted);line-height:1.65;">Usually within a few hours, always within 24 hours. You fill in the form with your package name, we generate the key and email it to you along with a payment link if it's a paid plan.</p>
+        </details>
+
+      </div>
     </div>
   </section>
 
@@ -751,7 +954,8 @@ print(<span class="c-str">'Real face confirmed: ${(result.score * 100).toStringA
           <h4>Get Started</h4>
           <a href="#" onclick="openModal('trial');return false;">Free Trial (10 days)</a>
           <a href="#" onclick="openModal('monthly');return false;">Monthly — $1/mo</a>
-          <a href="#" onclick="openModal('lifetime');return false;">Lifetime — $500</a>
+          <a href="#" onclick="openModal('lifetime');return false;">Lifetime 1 App — $10</a>
+          <a href="#" onclick="openModal('lifetime-bundle');return false;">Lifetime Bundle — $49</a>
         </div>
       </div>
       <div class="footer-bottom">
@@ -845,17 +1049,17 @@ print(<span class="c-str">'Real face confirmed: ${(result.score * 100).toStringA
     </form>
   </div>
 
-  <!-- Lifetime -->
+  <!-- Lifetime single -->
   <div class="modal" id="modal-lifetime" role="dialog" aria-modal="true" aria-labelledby="modal-lifetime-title">
     <div class="modal-header">
       <div>
-        <div class="modal-tag lifetime-tag">♾️ Lifetime — $500</div>
-        <h2 id="modal-lifetime-title">Get Lifetime License</h2>
-        <p>Pay once, use forever — covers up to 10 app package names. We'll email your license key and payment link within 24 hours.</p>
+        <div class="modal-tag lifetime-tag">♾️ Lifetime — $10</div>
+        <h2 id="modal-lifetime-title">Lifetime License — 1 App</h2>
+        <p>Pay $10 once, use forever — tied to 1 app package name. We'll email your key and payment link within 24 hours.</p>
       </div>
       <button class="modal-close" onclick="closeModal()" aria-label="Close">&times;</button>
     </div>
-    <form class="modal-form" id="form-lifetime" data-plan="lifetime">
+    <form class="modal-form" id="form-lifetime" data-plan="lifetime-single">
       <div class="form-row">
         <div class="form-group">
           <label>Your Name *</label>
@@ -875,10 +1079,48 @@ print(<span class="c-str">'Real face confirmed: ${(result.score * 100).toStringA
         <textarea name="message" rows="3" placeholder="Anything you'd like us to know..."></textarea>
       </div>
       <button type="submit" class="btn btn-primary btn-block btn-lg">
-        <span class="modal-btn-text">Get Lifetime License — $500</span>
+        <span class="modal-btn-text">Get Lifetime License — $10</span>
         <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </button>
-      <p class="form-note">We'll reply within 24 hours with your license key and a one-time payment link.</p>
+      <p class="form-note">We'll reply within 24 hours with your license key and a one-time $10 payment link.</p>
+      <div class="form-success" style="display:none"></div>
+    </form>
+  </div>
+
+  <!-- Lifetime bundle -->
+  <div class="modal" id="modal-lifetime-bundle" role="dialog" aria-modal="true" aria-labelledby="modal-bundle-title">
+    <div class="modal-header">
+      <div>
+        <div class="modal-tag lifetime-tag">♾️ Bundle — $49</div>
+        <h2 id="modal-bundle-title">Lifetime Bundle — Up to 10 Apps</h2>
+        <p>Pay $49 once, use forever across up to 10 package names. We'll email your key and payment link within 24 hours.</p>
+      </div>
+      <button class="modal-close" onclick="closeModal()" aria-label="Close">&times;</button>
+    </div>
+    <form class="modal-form" id="form-lifetime-bundle" data-plan="lifetime-bundle">
+      <div class="form-row">
+        <div class="form-group">
+          <label>Your Name *</label>
+          <input type="text" name="name" placeholder="John Doe" required />
+        </div>
+        <div class="form-group">
+          <label>Your Email *</label>
+          <input type="email" name="email" placeholder="you@example.com" required />
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Primary App Package Name *<span class="label-hint"> — e.g. com.yourname.appname</span></label>
+        <input type="text" name="package" placeholder="com.yourname.appname" class="mono" required />
+      </div>
+      <div class="form-group">
+        <label>Other package names <span class="label-hint">(up to 9 more, one per line)</span></label>
+        <textarea name="message" rows="4" placeholder="com.yourname.app2&#10;com.yourname.app3&#10;..."></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block btn-lg">
+        <span class="modal-btn-text">Get Bundle License — $49</span>
+        <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <p class="form-note">We'll reply within 24 hours with your license keys and a one-time $49 payment link.</p>
       <div class="form-success" style="display:none"></div>
     </form>
   </div>
@@ -968,7 +1210,7 @@ print(<span class="c-str">'Real face confirmed: ${(result.score * 100).toStringA
       <p>Monthly licenses are billed at $1 USD per month per app package name. Licenses renew automatically and may be cancelled at any time. Access continues until the end of the then-current paid period.</p>
 
       <h3>5. Lifetime License</h3>
-      <p>A Lifetime license grants perpetual access to the current version of the SDK and all future updates for up to 10 app package names specified at the time of purchase, for a one-time fee of $500 USD. "Perpetual" means the license does not expire as long as you comply with these Terms.</p>
+      <p>A Lifetime (Single) license grants perpetual access to the current version of the SDK and all future updates for 1 app package name, for a one-time fee of $10 USD. A Lifetime Bundle license covers up to 10 app package names for a one-time fee of $49 USD. "Perpetual" means the license does not expire as long as you comply with these Terms.</p>
 
       <h3>6. Updates &amp; Support</h3>
       <p>FaceNova will make commercially reasonable efforts to provide updates that maintain compatibility with current Flutter and OS versions. Lifetime license holders receive all future SDK updates at no additional cost. Monthly license holders receive updates while their subscription is active. FaceNova reserves the right to modify pricing for new license purchases.</p>
