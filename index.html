@@ -371,14 +371,17 @@
   <!-- ──────────────── TRUSTED BY / CLIENTS ──────────────── -->
   <section class="clients-bar">
     <div class="container">
+      <p class="trust-label">Trusted in production by</p>
       <div class="clients-logos">
-        <a href="https://www.kimshospitals.com/" target="_blank" rel="noopener" class="client-logo-link">
-          <img
-            src="kims-logo.png"
-            alt="KIMS Hospitals — Krishna Institute of Medical Sciences"
-            class="client-logo-img"
-            style="height:40px;"
-          />
+        <a href="https://www.kimshospitals.com/" target="_blank" rel="noopener"
+           style="display:flex;align-items:center;gap:14px;padding:14px 22px;background:var(--bg);border:1px solid var(--border);border-radius:10px;text-decoration:none;transition:border-color 0.15s;"
+           onmouseover="this.style.borderColor='var(--border-2)'" onmouseout="this.style.borderColor='var(--border)'">
+          <img src="kims-logo.png" alt="KIMS Hospitals" style="height:44px;width:auto;object-fit:contain;" />
+          <div>
+            <div style="font-size:0.82rem;font-weight:600;color:var(--text);">KIMS Hospitals</div>
+            <div style="font-size:0.72rem;color:var(--text-dim);">Krishna Institute of Medical Sciences</div>
+            <div style="font-size:0.7rem;color:var(--green);margin-top:2px;font-weight:500;">● Using FaceNova in production</div>
+          </div>
         </a>
       </div>
     </div>
