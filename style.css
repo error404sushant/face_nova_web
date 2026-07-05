@@ -1365,6 +1365,78 @@ img { max-width: 100%; }
 }
 
 /* ══════════════════════════════════════════
+   SDK SECTION DIVIDER
+══════════════════════════════════════════ */
+.sdk-section-anchor { background: var(--bg-2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.sdk-section-divider {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.ssd-icon {
+  width: 32px; height: 32px;
+  background: var(--accent-dim);
+  border: 1px solid var(--accent-border);
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+.sdk-section-divider > span:first-of-type {
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: var(--text);
+}
+.ssd-sub {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  flex: 1;
+}
+.ssd-apk-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 6px;
+  border: 1px solid var(--border-2);
+  background: var(--surface);
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: border-color 0.15s, color 0.15s;
+}
+.ssd-apk-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+/* Solution card actions row */
+.solution-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: auto;
+  flex-wrap: wrap;
+}
+.solution-apk-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 5px;
+  border: 1px solid var(--border-2);
+  background: var(--surface-2);
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: border-color 0.15s, color 0.15s;
+}
+.solution-apk-btn:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-dim); }
+
+/* ══════════════════════════════════════════
    LIVE DEMO DOT + BUTTON
 ══════════════════════════════════════════ */
 .demo-dot {
