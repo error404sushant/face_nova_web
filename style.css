@@ -1412,6 +1412,20 @@ img { max-width: 100%; }
 }
 .ssd-apk-btn:hover { border-color: var(--accent); color: var(--accent); }
 
+/* SDK card (div, not a) — needs cursor and hover */
+.solution-card-sdk { cursor: default; }
+.solution-cta-link {
+  text-decoration: none;
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: gap 0.15s;
+}
+.solution-cta-link:hover { gap: 8px; }
+
 /* Solution card actions row */
 .solution-card-actions {
   display: flex;
