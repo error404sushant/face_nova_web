@@ -162,6 +162,8 @@
       <ul class="nav-links">
         <li><a href="#features">Features</a></li>
         <li><a href="#how-it-works">How it works</a></li>
+        <li><a href="#driver-monitor">Driver Safety</a></li>
+        <li><a href="#attendance">Attendance</a></li>
         <li><a href="#integration">Integration</a></li>
         <li><a href="#pricing">Pricing</a></li>
       </ul>
@@ -191,6 +193,8 @@
       <a href="https://github.com/facenova/flutter_face_nova/releases/download/1.0.0/face.apk" download>⬇ Download Demo APK</a>
       <a href="#features" onclick="document.getElementById('mobile-menu').classList.remove('open')">Features</a>
       <a href="#how-it-works" onclick="document.getElementById('mobile-menu').classList.remove('open')">How it works</a>
+      <a href="#driver-monitor" onclick="document.getElementById('mobile-menu').classList.remove('open')">Driver Safety</a>
+      <a href="#attendance" onclick="document.getElementById('mobile-menu').classList.remove('open')">Attendance</a>
       <a href="#integration" onclick="document.getElementById('mobile-menu').classList.remove('open')">Integration</a>
       <a href="#pricing" onclick="document.getElementById('mobile-menu').classList.remove('open')">Pricing</a>
       <button class="btn btn-sm btn-primary" onclick="openModal('trial');document.getElementById('mobile-menu').classList.remove('open')">Try Free 10 Days</button>
@@ -776,6 +780,226 @@ print(<span class="c-str">'Real face confirmed: ${(result.score * 100).toStringA
           <p>Grant or deny physical and digital access based on face verification.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- ──────────────── DRIVER SAFETY MONITOR ──────────────── -->
+  <section class="section section-dark" id="driver-monitor">
+    <div class="container">
+      <div class="product-showcase">
+
+        <!-- Left: content -->
+        <div class="product-content">
+          <span class="section-tag">Driver Safety</span>
+          <h2 class="product-title">Real-Time Driver<br>Behavior Monitoring</h2>
+          <p class="product-desc">
+            MediaPipe-powered facial landmark analysis detects drowsiness, distraction, yawning and phone use — millisecond alerts before accidents happen. Runs on any camera, any vehicle, no GPU required.
+          </p>
+
+          <div class="bfeat-list">
+            <div class="bfeat-item">
+              <div class="bfeat-icon bfeat-icon-red">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/><line x1="2" y1="22" x2="22" y2="2"/></svg>
+              </div>
+              <div>
+                <div class="bfeat-name">Drowsiness Detection</div>
+                <div class="bfeat-sub">Eye Aspect Ratio (EAR) signals eyes closing below threshold</div>
+              </div>
+            </div>
+            <div class="bfeat-item">
+              <div class="bfeat-icon bfeat-icon-orange">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9" stroke-width="3"/><line x1="15" y1="9" x2="15.01" y2="9" stroke-width="3"/></svg>
+              </div>
+              <div>
+                <div class="bfeat-name">Yawn Detection</div>
+                <div class="bfeat-sub">Mouth Aspect Ratio (MAR) flags prolonged open-mouth events</div>
+              </div>
+            </div>
+            <div class="bfeat-item">
+              <div class="bfeat-icon bfeat-icon-yellow">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16" stroke-width="3"/></svg>
+              </div>
+              <div>
+                <div class="bfeat-name">Distraction Alert</div>
+                <div class="bfeat-sub">Head yaw/pitch tracking detects driver looking away from road</div>
+              </div>
+            </div>
+            <div class="bfeat-item">
+              <div class="bfeat-icon bfeat-icon-blue">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18" stroke-width="3"/></svg>
+              </div>
+              <div>
+                <div class="bfeat-name">Phone / Hand Use</div>
+                <div class="bfeat-sub">Hand landmark proximity to face detects device usage while driving</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-cta-row">
+            <a href="https://aura.facenova.uk" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
+              Try Live Demo
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <div class="product-mini-stats">
+              <span><strong>&lt;100ms</strong> per frame</span>
+              <span class="pms-div"></span>
+              <span><strong>4</strong> behavior signals</span>
+              <span class="pms-div"></span>
+              <span><strong>No GPU</strong> required</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: driver monitor mockup -->
+        <div class="product-visual">
+          <div class="driver-mock">
+            <div class="driver-mock-bar">
+              <div class="titlebar-dots"><span></span><span></span><span></span></div>
+              <span class="driver-mock-title">AURA — Driver Monitor</span>
+              <span class="driver-mock-live">● LIVE</span>
+            </div>
+            <div class="driver-mock-body">
+              <!-- Camera placeholder -->
+              <div class="driver-cam-area">
+                <div class="corner tl"></div><div class="corner tr"></div>
+                <div class="corner bl"></div><div class="corner br"></div>
+                <svg width="52" height="60" viewBox="0 0 52 60" fill="none">
+                  <ellipse cx="26" cy="30" rx="16" ry="20" stroke="rgba(37,99,235,0.4)" stroke-width="1.2"/>
+                  <circle cx="20" cy="26" r="2.5" fill="rgba(37,99,235,0.5)"/>
+                  <circle cx="32" cy="26" r="2.5" fill="rgba(37,99,235,0.5)"/>
+                  <path d="M20 36 Q26 41 32 36" stroke="rgba(37,99,235,0.5)" stroke-width="1.2" stroke-linecap="round" fill="none"/>
+                </svg>
+                <div class="driver-scan-line"></div>
+                <div class="driver-cam-label">MONITORING ACTIVE</div>
+              </div>
+              <!-- Behavior badges -->
+              <div class="driver-badges">
+                <div class="driver-badge driver-badge-ok">
+                  <span class="db-dot db-dot-green"></span>
+                  <span class="db-name">Drowsy</span>
+                  <span class="db-val db-ok">OK</span>
+                </div>
+                <div class="driver-badge driver-badge-ok">
+                  <span class="db-dot db-dot-green"></span>
+                  <span class="db-name">Yawning</span>
+                  <span class="db-val db-ok">OK</span>
+                </div>
+                <div class="driver-badge driver-badge-alert">
+                  <span class="db-dot db-dot-red"></span>
+                  <span class="db-name">Distracted</span>
+                  <span class="db-val db-alert">ALERT</span>
+                </div>
+                <div class="driver-badge driver-badge-ok">
+                  <span class="db-dot db-dot-green"></span>
+                  <span class="db-name">Phone Use</span>
+                  <span class="db-val db-ok">OK</span>
+                </div>
+              </div>
+              <!-- Metrics row -->
+              <div class="driver-metrics">
+                <div class="driver-metric">
+                  <span class="dm-label">Eye openness</span>
+                  <span class="dm-val">0.31</span>
+                </div>
+                <div class="driver-metric">
+                  <span class="dm-label">Mouth open</span>
+                  <span class="dm-val">0.12</span>
+                </div>
+                <div class="driver-metric">
+                  <span class="dm-label">Head turn</span>
+                  <span class="dm-val dm-alert-text">28.4°</span>
+                </div>
+                <div class="driver-metric">
+                  <span class="dm-label">Head tilt</span>
+                  <span class="dm-val">−3.1°</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ──────────────── FACE ATTENDANCE ──────────────── -->
+  <section class="section" id="attendance">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Face Attendance</span>
+        <h2>Automated Face Recognition<br>for Attendance &amp; Access</h2>
+        <p>Register employees or students once — identify and mark attendance instantly via webcam, CCTV feed or group photos. No badges, no cards, no friction.</p>
+      </div>
+
+      <div class="att-grid">
+
+        <div class="att-card">
+          <div class="att-card-icon att-icon-live">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+          </div>
+          <h3>Live Scanner</h3>
+          <p>Continuous webcam feed identifies registered faces in real-time, logging each match with timestamp and confidence score.</p>
+          <div class="att-card-tags"><span>Webcam</span><span>Real-time</span><span>Auto-log</span></div>
+        </div>
+
+        <div class="att-card">
+          <div class="att-card-icon att-icon-group">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3>Group Scan</h3>
+          <p>Upload a single group photo — AURA detects every face, matches against the database and marks attendance for the whole room at once.</p>
+          <div class="att-card-tags"><span>Multi-face</span><span>Batch mark</span><span>Group photo</span></div>
+        </div>
+
+        <div class="att-card">
+          <div class="att-card-icon att-icon-video">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="2" y="7" width="15" height="10" rx="2"/><path d="M17 9l5-3v12l-5-3V9z"/></svg>
+          </div>
+          <h3>CCTV Video Scan</h3>
+          <p>Process recorded CCTV footage — the system scans every second, extracts faces, identifies known individuals and generates a full timeline report.</p>
+          <div class="att-card-tags"><span>CCTV</span><span>MP4 / AVI</span><span>Timeline</span></div>
+        </div>
+
+        <div class="att-card">
+          <div class="att-card-icon att-icon-search">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="23" y2="12"/><line x1="23" y1="8" x2="19" y2="12"/></svg>
+          </div>
+          <h3>1:N Face Search</h3>
+          <p>Upload a single query photo to instantly search your entire registered database — find who is in an image in under 300 ms regardless of database size.</p>
+          <div class="att-card-tags"><span>DeepFace</span><span>VGG-Face</span><span>&lt;300ms</span></div>
+        </div>
+
+      </div>
+
+      <!-- Stats + CTA row -->
+      <div class="att-bottom">
+        <div class="att-stats-row">
+          <div class="att-stat">
+            <div class="att-stat-num">99.7<span>%</span></div>
+            <div class="att-stat-lbl">recognition accuracy</div>
+          </div>
+          <div class="att-stat-div"></div>
+          <div class="att-stat">
+            <div class="att-stat-num">&lt;300<span>ms</span></div>
+            <div class="att-stat-lbl">per identification</div>
+          </div>
+          <div class="att-stat-div"></div>
+          <div class="att-stat">
+            <div class="att-stat-num">∞</div>
+            <div class="att-stat-lbl">database size</div>
+          </div>
+          <div class="att-stat-div"></div>
+          <div class="att-stat">
+            <div class="att-stat-num">3</div>
+            <div class="att-stat-lbl">angle photos / person</div>
+          </div>
+        </div>
+        <a href="https://aura.facenova.uk" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
+          Try AURA Live Demo
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+
     </div>
   </section>
 
