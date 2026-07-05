@@ -147,9 +147,9 @@ const fadeObserver = new IntersectionObserver(
   { threshold: 0.08 }
 );
 
-document.querySelectorAll('.feature-card, .step, .use-case, .pricing-card, .flow-box').forEach((el, i) => {
+document.querySelectorAll('.feature-card, .step, .use-case, .pricing-card, .flow-box, .att-card, .bfeat-item, .solutions-stats, .driver-mock, .att-bottom').forEach((el, i) => {
   el.classList.add('fade-up');
-  el.style.transitionDelay = `${(i % 5) * 70}ms`;
+  el.style.transitionDelay = `${(i % 6) * 65}ms`;
   fadeObserver.observe(el);
 });
 
