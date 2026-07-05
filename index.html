@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Primary SEO -->
-  <title>FaceNova SDK — Face Liveness Detection &amp; Anti-Spoofing for Flutter, Android &amp; iOS</title>
-  <meta name="description" content="Face liveness detection SDK for Flutter, Android &amp; iOS. Passive anti-spoofing, face recognition, on-device AI. No cloud. GDPR-compliant. 3-line integration. From $10." />
-  <meta name="keywords" content="face liveness detection SDK, flutter face liveness, anti-spoofing SDK, face recognition flutter, passive liveness check, biometric SDK flutter, flutter face detection, liveness detection android, liveness detection iOS, react native face liveness, on-device face recognition, GDPR biometric SDK, face matching flutter, flutter_face_nova" />
+  <title>FaceNova — AI Face Intelligence Platform | Mobile SDK, Driver Safety, Attendance & KYC</title>
+  <meta name="description" content="FaceNova provides AI face solutions for every industry: face liveness SDK for Flutter/Android/iOS, real-time driver behavior monitoring, CCTV-based attendance, school bus check-in, and KYC document verification. On-device AI, no cloud." />
+  <meta name="keywords" content="face liveness detection SDK, flutter face liveness, anti-spoofing SDK, driver drowsiness detection, driver safety monitoring, face attendance system, CCTV attendance, school bus attendance, KYC face verification, document scan AI, face recognition flutter, on-device face recognition, GDPR biometric SDK, flutter_face_nova, AI face platform" />
   <meta name="author" content="FaceNova" />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#2563eb" />
@@ -160,10 +160,34 @@
         <span>Face<strong>Nova</strong></span>
       </a>
       <ul class="nav-links">
-        <li><a href="#features">Features</a></li>
+        <li class="nav-dropdown">
+          <a href="#solutions" class="nav-dropdown-trigger">Products
+            <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M3 5l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="#features" class="ndm-item">
+              <span class="ndm-icon" style="background:rgba(37,99,235,0.1);color:#2563eb">📱</span>
+              <span><strong>Mobile Face SDK</strong><small>Flutter · Android · iOS</small></span>
+            </a>
+            <a href="#driver-monitor" class="ndm-item">
+              <span class="ndm-icon" style="background:rgba(245,158,11,0.1);color:#d97706">🚗</span>
+              <span><strong>Driver Safety Monitor</strong><small>Drowsiness & distraction</small></span>
+            </a>
+            <a href="#attendance" class="ndm-item">
+              <span class="ndm-icon" style="background:rgba(22,163,74,0.1);color:#16a34a">📷</span>
+              <span><strong>Face Attendance</strong><small>CCTV & office</small></span>
+            </a>
+            <a href="#school-bus" class="ndm-item">
+              <span class="ndm-icon" style="background:rgba(139,92,246,0.1);color:#7c3aed">🚌</span>
+              <span><strong>School Bus Check-in</strong><small>Student boarding</small></span>
+            </a>
+            <a href="#kyc" class="ndm-item">
+              <span class="ndm-icon" style="background:rgba(239,68,68,0.1);color:#dc2626">🪪</span>
+              <span><strong>KYC & Document Scan</strong><small>ID verify & face match</small></span>
+            </a>
+          </div>
+        </li>
         <li><a href="#how-it-works">How it works</a></li>
-        <li><a href="#driver-monitor">Driver Safety</a></li>
-        <li><a href="#attendance">Attendance</a></li>
         <li><a href="#integration">Integration</a></li>
         <li><a href="#pricing">Pricing</a></li>
       </ul>
@@ -179,9 +203,9 @@
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
           </svg>
         </button>
-        <a href="https://github.com/facenova/flutter_face_nova/releases/download/1.0.0/face.apk" download class="btn btn-sm btn-ghost nav-cta" style="gap:5px;">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M12 16l-5-5h3V4h4v7h3l-5 5z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M5 20h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-          Demo APK
+        <a href="https://aura.facenova.uk" class="btn btn-sm btn-demo nav-cta">
+          <span class="demo-dot"></span>
+          Live Demo
         </a>
         <button class="btn btn-sm btn-primary nav-cta" onclick="openModal('trial')">Try Free 10 Days</button>
         <button class="hamburger" id="hamburger" aria-label="Menu">
@@ -190,13 +214,16 @@
       </div>
     </div>
     <div class="mobile-menu" id="mobile-menu">
-      <a href="https://github.com/facenova/flutter_face_nova/releases/download/1.0.0/face.apk" download>⬇ Download Demo APK</a>
-      <a href="#features" onclick="document.getElementById('mobile-menu').classList.remove('open')">Features</a>
+      <a href="https://aura.facenova.uk" style="color:var(--accent);font-weight:600;" onclick="document.getElementById('mobile-menu').classList.remove('open')">● Try Live Demo</a>
+      <a href="#features" onclick="document.getElementById('mobile-menu').classList.remove('open')">📱 Mobile SDK</a>
+      <a href="#driver-monitor" onclick="document.getElementById('mobile-menu').classList.remove('open')">🚗 Driver Safety</a>
+      <a href="#attendance" onclick="document.getElementById('mobile-menu').classList.remove('open')">📷 Face Attendance</a>
+      <a href="#school-bus" onclick="document.getElementById('mobile-menu').classList.remove('open')">🚌 School Bus</a>
+      <a href="#kyc" onclick="document.getElementById('mobile-menu').classList.remove('open')">🪪 KYC & Document</a>
       <a href="#how-it-works" onclick="document.getElementById('mobile-menu').classList.remove('open')">How it works</a>
-      <a href="#driver-monitor" onclick="document.getElementById('mobile-menu').classList.remove('open')">Driver Safety</a>
-      <a href="#attendance" onclick="document.getElementById('mobile-menu').classList.remove('open')">Attendance</a>
       <a href="#integration" onclick="document.getElementById('mobile-menu').classList.remove('open')">Integration</a>
       <a href="#pricing" onclick="document.getElementById('mobile-menu').classList.remove('open')">Pricing</a>
+      <a href="https://github.com/facenova/flutter_face_nova/releases/download/1.0.0/face.apk" download>⬇ Download Demo APK</a>
       <button class="btn btn-sm btn-primary" onclick="openModal('trial');document.getElementById('mobile-menu').classList.remove('open')">Try Free 10 Days</button>
     </div>
   </nav>
@@ -214,23 +241,49 @@
         <div class="hero-content">
           <div class="badge">
             <span class="badge-dot"></span>
-            Flutter • Android • iOS
+            AI Face Intelligence Platform
           </div>
           <h1>
-            AI That Knows<br />
-            <span class="gradient-text">Who's Really There.</span>
+            Five AI Solutions.<br />
+            <span class="gradient-text">One Smart Platform.</span>
           </h1>
           <p class="hero-sub">
-            FaceNova builds AI-powered face technology for apps, vehicles, and workplaces —
-            blocking fake logins, keeping drivers awake, and automating attendance.
-            Everything runs on-device. No cloud. No data leaks.
+            FaceNova powers face liveness for apps, driver safety monitoring,
+            automated attendance, school bus check-in, and KYC verification —
+            all running on-device, all in real time.
           </p>
+
+          <!-- Product service tabs -->
+          <div class="hero-product-tabs">
+            <a href="#features" class="hpt-tab">
+              <span class="hpt-icon">📱</span>
+              <span class="hpt-name">Mobile SDK</span>
+            </a>
+            <a href="#driver-monitor" class="hpt-tab">
+              <span class="hpt-icon">🚗</span>
+              <span class="hpt-name">Driver Safety</span>
+            </a>
+            <a href="#attendance" class="hpt-tab">
+              <span class="hpt-icon">📷</span>
+              <span class="hpt-name">CCTV Attendance</span>
+            </a>
+            <a href="#school-bus" class="hpt-tab">
+              <span class="hpt-icon">🚌</span>
+              <span class="hpt-name">School Bus</span>
+            </a>
+            <a href="#kyc" class="hpt-tab">
+              <span class="hpt-icon">🪪</span>
+              <span class="hpt-name">KYC & Document</span>
+            </a>
+          </div>
+
           <div class="hero-actions">
-            <button class="btn btn-primary btn-lg" onclick="openModal('trial')">
-              Try Free for 10 Days
+            <a href="https://aura.facenova.uk" class="btn btn-primary btn-lg">
+              <span class="demo-dot"></span>
+              Try Live Demo
               <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
-            <a href="#pricing" class="btn btn-ghost btn-lg">See Pricing</a>
+            </a>
+            <button class="btn btn-ghost btn-lg" onclick="openModal('trial')">Free 10-Day Trial</button>
           </div>
           <div class="hero-stats">
             <div class="stat">
@@ -397,11 +450,11 @@
     <div class="container">
       <div class="section-header">
         <span class="section-tag">What We Build</span>
-        <h2>Three problems.<br>One AI platform.</h2>
-        <p>Whether you're building an app, running a fleet, or managing a school — we have an AI face solution ready for you.</p>
+        <h2>Five problems.<br>One AI platform.</h2>
+        <p>Whether you're building an app, running a fleet, managing a school, or verifying identities — we have an AI face solution ready for you.</p>
       </div>
 
-      <div class="solutions-grid">
+      <div class="solutions-grid solutions-grid-5">
 
         <!-- Solution 1: SDK -->
         <a href="#features" class="solution-card fade-up">
@@ -411,35 +464,33 @@
               <circle cx="12" cy="12" r="3"/>
             </svg>
           </div>
-          <div class="solution-label">For Mobile Apps</div>
-          <h3>Stop Fake Logins</h3>
-          <p>Make sure the person logging into your app is a real human — not a printed photo or a video. Works silently, no selfie required. 3 lines of Flutter code.</p>
+          <div class="solution-label">Mobile Apps</div>
+          <h3>Face Liveness SDK</h3>
+          <p>Block fake logins with passive liveness detection. Works silently from a single frame. Flutter, Android, iOS in 3 lines.</p>
           <div class="solution-pills">
-            <span>Flutter</span><span>Android</span><span>iOS</span><span>On-device</span>
+            <span>Flutter</span><span>Android</span><span>iOS</span>
           </div>
           <span class="solution-cta-link">Explore SDK <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         </a>
 
         <!-- Solution 2: Driver Safety -->
         <a href="#driver-monitor" class="solution-card solution-card-featured fade-up">
-          <div class="solution-badge-top">Most Popular</div>
+          <div class="solution-badge-top">Live Demo Available</div>
           <div class="solution-icon sol-amber">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
-              <circle cx="12" cy="12" r="10"/>
-              <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/>
-              <circle cx="12" cy="12" r="3"/>
+              <circle cx="12" cy="10" r="4"/><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/>
             </svg>
           </div>
-          <div class="solution-label">For Fleets &amp; Transport</div>
-          <h3>Keep Drivers Wide Awake</h3>
-          <p>A camera watches your driver's eyes and head in real time. Falling asleep? Looking at their phone? Head turned away? Instant alert — before anything goes wrong.</p>
+          <div class="solution-label">Fleets & Transport</div>
+          <h3>Driver Safety Monitor</h3>
+          <p>Camera watches eyes, head and hands in real time. Drowsy? Distracted? On phone? Instant alert before accidents happen.</p>
           <div class="solution-pills">
-            <span>Drowsiness Alert</span><span>Phone Detection</span><span>Real-time</span>
+            <span>Drowsiness</span><span>Distraction</span><span>Real-time</span>
           </div>
-          <span class="solution-cta-link">See live demo <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span class="solution-cta-link">Try live demo <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         </a>
 
-        <!-- Solution 3: Attendance -->
+        <!-- Solution 3: CCTV Attendance -->
         <a href="#attendance" class="solution-card fade-up">
           <div class="solution-icon sol-green">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
@@ -447,16 +498,53 @@
               <circle cx="9" cy="7" r="4"/>
               <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
               <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-              <path d="M19 10l2 2 4-4" stroke-width="2"/>
             </svg>
           </div>
-          <div class="solution-label">For Offices &amp; Schools</div>
-          <h3>Attendance Without Badges</h3>
-          <p>Staff or students walk in front of a camera — our AI recognises their face and marks them present automatically. No cards, no pins, no manual checkmarks.</p>
+          <div class="solution-label">Offices & Schools</div>
+          <h3>CCTV Face Attendance</h3>
+          <p>Walk in front of the camera — AI recognises faces and marks attendance automatically. No badges, no cards, no friction.</p>
           <div class="solution-pills">
             <span>Group Scan</span><span>CCTV</span><span>Auto-mark</span>
           </div>
-          <span class="solution-cta-link">How it works <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span class="solution-cta-link">See how it works <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+
+        <!-- Solution 4: School Bus -->
+        <a href="#school-bus" class="solution-card fade-up">
+          <div class="solution-icon sol-purple">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+              <rect x="1" y="6" width="22" height="13" rx="2"/>
+              <path d="M16 6V4"/><path d="M8 6V4"/>
+              <circle cx="7" cy="19" r="2"/><circle cx="17" cy="19" r="2"/>
+              <path d="M5 13h14"/>
+            </svg>
+          </div>
+          <div class="solution-label">Schools & Institutes</div>
+          <h3>School Bus Check-in</h3>
+          <p>Students board the bus — face recognition marks them present and notifies parents instantly. No cards, no roll calls.</p>
+          <div class="solution-pills">
+            <span>Boarding</span><span>Parent alert</span><span>Real-time</span>
+          </div>
+          <span class="solution-cta-link">Learn more <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+
+        <!-- Solution 5: KYC -->
+        <a href="#kyc" class="solution-card fade-up">
+          <div class="solution-icon sol-rose">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+              <rect x="2" y="4" width="20" height="16" rx="2"/>
+              <circle cx="8" cy="10" r="2.5"/>
+              <path d="M14 9h4M14 13h3"/>
+              <path d="M4 18c0-1.5 1.8-3 4-3s4 1.5 4 3"/>
+            </svg>
+          </div>
+          <div class="solution-label">Fintech & Banking</div>
+          <h3>KYC & Document Scan</h3>
+          <p>Verify government IDs, passports and licenses. Match the face on the document with the live user. OCR extracts all data.</p>
+          <div class="solution-pills">
+            <span>Passport</span><span>ID Card</span><span>Face Match</span>
+          </div>
+          <span class="solution-cta-link">Explore KYC <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         </a>
 
       </div>
@@ -1091,11 +1179,416 @@ print(<span class="c-str">'Real face confirmed: ${(result.score * 100).toStringA
           </div>
         </div>
         <a href="https://aura.facenova.uk" class="btn btn-primary btn-lg">
-          Try AURA Live Demo
+          <span class="demo-dot"></span>
+          Try FaceNova Live Demo
           <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
       </div>
 
+    </div>
+  </section>
+
+  <!-- ──────────────── SCHOOL BUS ATTENDANCE ──────────────── -->
+  <section class="section section-dark" id="school-bus">
+    <div class="container">
+      <div class="product-showcase">
+
+        <!-- Left: content -->
+        <div class="product-content">
+          <span class="section-tag">School Bus</span>
+          <h2 class="product-title">Smart School Bus<br>Check-in System</h2>
+          <p class="product-desc">
+            Students board the bus — FaceNova's camera recognises each face, marks them present, and sends an instant notification to parents. Works offline, no internet required at the bus.
+          </p>
+
+          <div class="bfeat-list">
+            <div class="bfeat-item fade-up">
+              <div class="bfeat-icon bfeat-icon-purple">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+              </div>
+              <div>
+                <div class="bfeat-name">Face-based Boarding</div>
+                <div class="bfeat-sub">Camera at bus door recognises students in under 300ms per face</div>
+              </div>
+            </div>
+            <div class="bfeat-item fade-up">
+              <div class="bfeat-icon bfeat-icon-blue">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 11.62 19a19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 3.1 4.18 2 2 0 0 1 5.09 2h3a2 2 0 0 1 2 1.72A12.84 12.84 0 0 0 10.78 6.7a2 2 0 0 1-.45 2.11L9.09 10a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45A12.84 12.84 0 0 0 21 17.92z"/></svg>
+              </div>
+              <div>
+                <div class="bfeat-name">Instant Parent Notification</div>
+                <div class="bfeat-sub">SMS or app push sent automatically when child boards or exits</div>
+              </div>
+            </div>
+            <div class="bfeat-item fade-up">
+              <div class="bfeat-icon bfeat-icon-green">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <div>
+                <div class="bfeat-name">Offline Operation</div>
+                <div class="bfeat-sub">Face database stored on-device — works without mobile data on the road</div>
+              </div>
+            </div>
+            <div class="bfeat-item fade-up">
+              <div class="bfeat-icon bfeat-icon-orange">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+              </div>
+              <div>
+                <div class="bfeat-name">Daily Attendance Reports</div>
+                <div class="bfeat-sub">Auto-generated report per route: who boarded, who missed, timestamps</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-cta-row">
+            <a href="https://aura.facenova.uk" class="btn btn-primary btn-lg">
+              <span class="demo-dot"></span>
+              Try Live Demo
+            </a>
+            <div class="product-mini-stats">
+              <span><strong>&lt;300ms</strong> per face</span>
+              <span class="pms-div"></span>
+              <span><strong>Offline</strong> capable</span>
+              <span class="pms-div"></span>
+              <span><strong>Instant</strong> alerts</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: bus boarding visual -->
+        <div class="product-visual">
+          <div class="bus-mock">
+            <div class="driver-mock-bar">
+              <div class="titlebar-dots"><span></span><span></span><span></span></div>
+              <span class="driver-mock-title">School Bus — Check-in</span>
+              <span class="bus-mock-route">Route 07</span>
+            </div>
+            <div class="bus-mock-body">
+              <div class="bus-student-list">
+                <div class="bus-student bus-student-boarded">
+                  <div class="bus-face-oval">
+                    <svg width="32" height="38" viewBox="0 0 32 38" fill="none">
+                      <ellipse cx="16" cy="19" rx="10" ry="13" stroke="rgba(139,92,246,0.4)" stroke-width="1.2"/>
+                      <circle cx="12" cy="16" r="1.8" fill="rgba(139,92,246,0.6)"/>
+                      <circle cx="20" cy="16" r="1.8" fill="rgba(139,92,246,0.6)"/>
+                      <path d="M12 23 Q16 27 20 23" stroke="rgba(139,92,246,0.6)" stroke-width="1.2" stroke-linecap="round" fill="none"/>
+                    </svg>
+                  </div>
+                  <div class="bus-student-info">
+                    <div class="bus-student-name">Aarav Sharma</div>
+                    <div class="bus-student-time">08:14 AM</div>
+                  </div>
+                  <div class="bus-student-status boarded">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="6" fill="#16a34a"/><path d="M3 6l2 2 4-4" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    BOARDED
+                  </div>
+                </div>
+                <div class="bus-student bus-student-boarded">
+                  <div class="bus-face-oval">
+                    <svg width="32" height="38" viewBox="0 0 32 38" fill="none">
+                      <ellipse cx="16" cy="19" rx="10" ry="13" stroke="rgba(139,92,246,0.4)" stroke-width="1.2"/>
+                      <circle cx="12" cy="16" r="1.8" fill="rgba(139,92,246,0.6)"/>
+                      <circle cx="20" cy="16" r="1.8" fill="rgba(139,92,246,0.6)"/>
+                      <path d="M12 23 Q16 27 20 23" stroke="rgba(139,92,246,0.6)" stroke-width="1.2" stroke-linecap="round" fill="none"/>
+                    </svg>
+                  </div>
+                  <div class="bus-student-info">
+                    <div class="bus-student-name">Priya Reddy</div>
+                    <div class="bus-student-time">08:16 AM</div>
+                  </div>
+                  <div class="bus-student-status boarded">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="6" fill="#16a34a"/><path d="M3 6l2 2 4-4" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    BOARDED
+                  </div>
+                </div>
+                <div class="bus-student bus-student-scanning">
+                  <div class="bus-face-oval bus-face-scanning">
+                    <svg width="32" height="38" viewBox="0 0 32 38" fill="none">
+                      <ellipse cx="16" cy="19" rx="10" ry="13" stroke="rgba(245,158,11,0.6)" stroke-width="1.5"/>
+                      <circle cx="12" cy="16" r="1.8" fill="rgba(245,158,11,0.7)"/>
+                      <circle cx="20" cy="16" r="1.8" fill="rgba(245,158,11,0.7)"/>
+                    </svg>
+                    <div class="bus-scan-line"></div>
+                  </div>
+                  <div class="bus-student-info">
+                    <div class="bus-student-name">Scanning...</div>
+                    <div class="bus-student-time">08:17 AM</div>
+                  </div>
+                  <div class="bus-student-status scanning">
+                    <div class="scan-spinner"></div>
+                    DETECT
+                  </div>
+                </div>
+                <div class="bus-student bus-student-absent">
+                  <div class="bus-face-oval" style="opacity:0.4">
+                    <svg width="32" height="38" viewBox="0 0 32 38" fill="none">
+                      <ellipse cx="16" cy="19" rx="10" ry="13" stroke="rgba(150,150,150,0.4)" stroke-width="1.2"/>
+                      <circle cx="12" cy="16" r="1.8" fill="rgba(150,150,150,0.4)"/>
+                      <circle cx="20" cy="16" r="1.8" fill="rgba(150,150,150,0.4)"/>
+                    </svg>
+                  </div>
+                  <div class="bus-student-info">
+                    <div class="bus-student-name">Rahul Gupta</div>
+                    <div class="bus-student-time">Expected</div>
+                  </div>
+                  <div class="bus-student-status absent">ABSENT</div>
+                </div>
+              </div>
+              <div class="bus-mock-footer">
+                <span class="bus-count-ok">2 boarded</span>
+                <span class="bus-count-absent">1 absent</span>
+                <span class="bus-notif">📲 Parents notified</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ──────────────── KYC & DOCUMENT SCAN ──────────────── -->
+  <section class="section" id="kyc">
+    <div class="container">
+      <div class="product-showcase product-showcase-reverse">
+
+        <!-- Left: KYC visual -->
+        <div class="product-visual">
+          <div class="kyc-mock">
+            <div class="driver-mock-bar">
+              <div class="titlebar-dots"><span></span><span></span><span></span></div>
+              <span class="driver-mock-title">KYC Verification</span>
+              <span class="driver-mock-live kyc-live">● VERIFYING</span>
+            </div>
+            <div class="kyc-mock-body">
+              <!-- Document card -->
+              <div class="kyc-doc-card">
+                <div class="kyc-doc-face">
+                  <svg width="36" height="42" viewBox="0 0 36 42" fill="none">
+                    <ellipse cx="18" cy="21" rx="11" ry="14" stroke="rgba(239,68,68,0.4)" stroke-width="1.2"/>
+                    <circle cx="13" cy="17" r="2" fill="rgba(239,68,68,0.5)"/>
+                    <circle cx="23" cy="17" r="2" fill="rgba(239,68,68,0.5)"/>
+                    <path d="M13 26 Q18 30 23 26" stroke="rgba(239,68,68,0.5)" stroke-width="1.2" stroke-linecap="round" fill="none"/>
+                  </svg>
+                </div>
+                <div class="kyc-doc-data">
+                  <div class="kyc-data-row"><span class="kyc-label">Name</span><span class="kyc-value">Sushant Behera</span></div>
+                  <div class="kyc-data-row"><span class="kyc-label">DOB</span><span class="kyc-value">14 Mar 1997</span></div>
+                  <div class="kyc-data-row"><span class="kyc-label">ID No.</span><span class="kyc-value mono">DL-2024-0048127</span></div>
+                  <div class="kyc-data-row"><span class="kyc-label">Expiry</span><span class="kyc-value">2029-03-14</span></div>
+                </div>
+                <div class="kyc-scan-line"></div>
+              </div>
+
+              <!-- Match result -->
+              <div class="kyc-match-row">
+                <div class="kyc-live-face">
+                  <div class="kyc-face-ring">
+                    <svg width="28" height="34" viewBox="0 0 28 34" fill="none">
+                      <ellipse cx="14" cy="17" rx="9" ry="12" stroke="rgba(239,68,68,0.4)" stroke-width="1.2"/>
+                      <circle cx="10" cy="14" r="1.8" fill="rgba(239,68,68,0.5)"/>
+                      <circle cx="18" cy="14" r="1.8" fill="rgba(239,68,68,0.5)"/>
+                      <path d="M10 21 Q14 25 18 21" stroke="rgba(239,68,68,0.5)" stroke-width="1.2" stroke-linecap="round" fill="none"/>
+                    </svg>
+                  </div>
+                  <div style="font-size:0.65rem;color:var(--text-dim);margin-top:4px;">Live face</div>
+                </div>
+
+                <div class="kyc-match-result">
+                  <div class="kyc-match-score">97.8<span>%</span></div>
+                  <div class="kyc-match-label kyc-match-pass">
+                    <svg width="12" height="12" viewBox="0 0 12 12"><circle cx="6" cy="6" r="6" fill="#16a34a"/><path d="M3 6l2 2 4-4" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    FACE MATCH
+                  </div>
+                </div>
+
+                <div class="kyc-doc-face kyc-doc-thumb">
+                  <div class="kyc-face-ring" style="border-color:rgba(22,163,74,0.4)">
+                    <svg width="28" height="34" viewBox="0 0 28 34" fill="none">
+                      <ellipse cx="14" cy="17" rx="9" ry="12" stroke="rgba(22,163,74,0.5)" stroke-width="1.2"/>
+                      <circle cx="10" cy="14" r="1.8" fill="rgba(22,163,74,0.6)"/>
+                      <circle cx="18" cy="14" r="1.8" fill="rgba(22,163,74,0.6)"/>
+                      <path d="M10 21 Q14 25 18 21" stroke="rgba(22,163,74,0.6)" stroke-width="1.2" stroke-linecap="round" fill="none"/>
+                    </svg>
+                  </div>
+                  <div style="font-size:0.65rem;color:var(--text-dim);margin-top:4px;">ID photo</div>
+                </div>
+              </div>
+
+              <!-- Status badges -->
+              <div class="kyc-badges">
+                <span class="kyc-badge kyc-ok">✓ Document Authentic</span>
+                <span class="kyc-badge kyc-ok">✓ Face Matched</span>
+                <span class="kyc-badge kyc-ok">✓ Not Expired</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: content -->
+        <div class="product-content">
+          <span class="section-tag">KYC & Identity</span>
+          <h2 class="product-title">Verify Identities<br>in Seconds</h2>
+          <p class="product-desc">
+            Scan any government-issued document — passport, driver's license, national ID — extract all data with OCR, then match the face on the document with the live user's face. Full KYC in under 5 seconds.
+          </p>
+
+          <div class="bfeat-list">
+            <div class="bfeat-item fade-up">
+              <div class="bfeat-icon bfeat-icon-red">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="4" width="20" height="16" rx="2"/><circle cx="8" cy="10" r="2"/><path d="M4 18c0-2 1.8-3 4-3s4 1 4 3"/><path d="M14 9h4M14 13h3"/></svg>
+              </div>
+              <div>
+                <div class="bfeat-name">Document OCR</div>
+                <div class="bfeat-sub">Extracts name, DOB, ID number, expiry — any government ID format</div>
+              </div>
+            </div>
+            <div class="bfeat-item fade-up">
+              <div class="bfeat-icon bfeat-icon-orange">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 3H5a2 2 0 0 0-2 2v4"/><path d="M9 21H5a2 2 0 0 1-2-2v-4"/><path d="M15 3h4a2 2 0 0 1 2 2v4"/><path d="M15 21h4a2 2 0 0 0 2-2v-4"/><circle cx="12" cy="12" r="3"/></svg>
+              </div>
+              <div>
+                <div class="bfeat-name">Live Face Match</div>
+                <div class="bfeat-sub">Compares face photo on document with live camera — 97%+ accuracy</div>
+              </div>
+            </div>
+            <div class="bfeat-item fade-up">
+              <div class="bfeat-icon bfeat-icon-yellow">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <div>
+                <div class="bfeat-name">Liveness Check</div>
+                <div class="bfeat-sub">Passive anti-spoofing ensures the live face is real — blocks photos and replays</div>
+              </div>
+            </div>
+            <div class="bfeat-item fade-up">
+              <div class="bfeat-icon bfeat-icon-green">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              </div>
+              <div>
+                <div class="bfeat-name">Under 5 Seconds</div>
+                <div class="bfeat-sub">Full KYC pipeline — scan, extract, match, verify — in one session</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="kyc-doc-types">
+            <span class="kyc-doc-type">🪪 National ID</span>
+            <span class="kyc-doc-type">🛂 Passport</span>
+            <span class="kyc-doc-type">🚗 Driver's License</span>
+            <span class="kyc-doc-type">🏦 Bank ID</span>
+          </div>
+
+          <div class="product-cta-row">
+            <button class="btn btn-primary btn-lg" onclick="openModal('trial')">
+              Get KYC SDK Access
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ──────────────── LIVE DEMO SHOWCASE ──────────────── -->
+  <section class="demo-showcase-section" id="live-demo">
+    <div class="container">
+      <div class="demo-showcase-inner">
+        <div class="demo-showcase-content">
+          <div class="demo-live-badge">
+            <span class="demo-dot"></span>
+            Platform is Live
+          </div>
+          <h2>See Every Solution<br>Working Right Now.</h2>
+          <p>FaceNova's web platform lets you test face recognition, attendance, driver monitoring and more — directly in your browser. No install, no signup required.</p>
+          <div class="demo-feature-list">
+            <div class="dfl-item">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="var(--accent)" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"/></svg>
+              Face recognition &amp; attendance marking
+            </div>
+            <div class="dfl-item">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="var(--accent)" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"/></svg>
+              Real-time driver behavior monitoring
+            </div>
+            <div class="dfl-item">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="var(--accent)" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"/></svg>
+              Group photo attendance scan
+            </div>
+            <div class="dfl-item">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="var(--accent)" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"/></svg>
+              Face search across any database size
+            </div>
+          </div>
+          <div class="demo-showcase-actions">
+            <a href="https://aura.facenova.uk" class="btn btn-primary btn-lg">
+              <span class="demo-dot"></span>
+              Open Live Platform
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="https://github.com/facenova/flutter_face_nova/releases/download/1.0.0/face.apk" download class="btn btn-ghost btn-lg">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 16l-5-5h3V4h4v7h3l-5 5z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M5 20h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              Download Android Demo APK
+            </a>
+          </div>
+        </div>
+        <div class="demo-showcase-visual">
+          <div class="demo-browser-frame">
+            <div class="dbf-bar">
+              <div class="titlebar-dots"><span></span><span></span><span></span></div>
+              <div class="dbf-url">aura.facenova.uk</div>
+              <div class="dbf-live-indicator">● LIVE</div>
+            </div>
+            <div class="dbf-body">
+              <div class="dbf-nav">
+                <span class="dbf-logo">FaceNova</span>
+                <div class="dbf-tabs">
+                  <span class="dbf-tab dbf-tab-active">Attendance</span>
+                  <span class="dbf-tab">Driver Monitor</span>
+                </div>
+              </div>
+              <div class="dbf-content">
+                <!-- Simulated face grid -->
+                <div class="dbf-face-grid">
+                  <div class="dbf-face dbf-face-match">
+                    <div class="dbf-face-oval">
+                      <svg width="24" height="28" viewBox="0 0 24 28" fill="none"><ellipse cx="12" cy="14" rx="7" ry="9" stroke="rgba(22,163,74,0.5)" stroke-width="1.2"/><circle cx="9" cy="11" r="1.5" fill="rgba(22,163,74,0.6)"/><circle cx="15" cy="11" r="1.5" fill="rgba(22,163,74,0.6)"/></svg>
+                    </div>
+                    <div class="dbf-name">Aarav</div>
+                    <div class="dbf-status dbf-ok">✓</div>
+                  </div>
+                  <div class="dbf-face dbf-face-match" style="animation-delay:0.15s">
+                    <div class="dbf-face-oval">
+                      <svg width="24" height="28" viewBox="0 0 24 28" fill="none"><ellipse cx="12" cy="14" rx="7" ry="9" stroke="rgba(22,163,74,0.5)" stroke-width="1.2"/><circle cx="9" cy="11" r="1.5" fill="rgba(22,163,74,0.6)"/><circle cx="15" cy="11" r="1.5" fill="rgba(22,163,74,0.6)"/></svg>
+                    </div>
+                    <div class="dbf-name">Priya</div>
+                    <div class="dbf-status dbf-ok">✓</div>
+                  </div>
+                  <div class="dbf-face dbf-face-scanning" style="animation-delay:0.3s">
+                    <div class="dbf-face-oval">
+                      <svg width="24" height="28" viewBox="0 0 24 28" fill="none"><ellipse cx="12" cy="14" rx="7" ry="9" stroke="rgba(245,158,11,0.6)" stroke-width="1.2"/><circle cx="9" cy="11" r="1.5" fill="rgba(245,158,11,0.7)"/><circle cx="15" cy="11" r="1.5" fill="rgba(245,158,11,0.7)"/></svg>
+                    </div>
+                    <div class="dbf-name">Scanning</div>
+                    <div class="dbf-status dbf-scan">…</div>
+                  </div>
+                  <div class="dbf-face dbf-face-match" style="animation-delay:0.45s">
+                    <div class="dbf-face-oval">
+                      <svg width="24" height="28" viewBox="0 0 24 28" fill="none"><ellipse cx="12" cy="14" rx="7" ry="9" stroke="rgba(22,163,74,0.5)" stroke-width="1.2"/><circle cx="9" cy="11" r="1.5" fill="rgba(22,163,74,0.6)"/><circle cx="15" cy="11" r="1.5" fill="rgba(22,163,74,0.6)"/></svg>
+                    </div>
+                    <div class="dbf-name">Rahul</div>
+                    <div class="dbf-status dbf-ok">✓</div>
+                  </div>
+                </div>
+                <div class="dbf-stats-row">
+                  <span class="dbf-stat-item"><strong>3</strong> present</span>
+                  <span class="dbf-stat-item"><strong>1</strong> scanning</span>
+                  <span class="dbf-stat-item"><strong>98.7%</strong> accuracy</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
